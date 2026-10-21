@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Westwind at Flower Hill</title>
+<meta name="description" content="Contact the Westwind sub-association board.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+CONTACT
+  General-purpose <form data-form="contact"> plus the real mailing address
+  and email listed beside it. Submissions are handled by forms.js, which
+  posts to the Google Apps Script web app (westwind-forms-apps-script.gs):
+  it logs the message to a Google Sheet, emails the board, and emails the
+  sender a receipt. All four site forms (contact, ACC, rental registration,
+  violation report) work this way. To add another, copy one <form> block,
+  give it a new data-form name, and add that name to FORM_DEFS in the script.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">We'd like to hear from you</span>
+      <h1>Contact the Board</h1>
+      <p>Questions, concerns, or maintenance reports. Send a note and a board member will follow up.</p>
+    </div>
+</section>
+
+  <!-- Direct contact info (address/email) on the left, the form itself on the right.
+       Form fields start at the <form> tag below. Field names (name="...") must match
+       the contact entry in FORM_DEFS inside westwind-forms-apps-script.gs. -->
+  <section aria-labelledby="contact-h">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="contact-h" style="font-size:1.5rem;">Reach Us Directly</h2>
+        <div class="contact-item">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <div><h3>Email</h3><p><a href="mailto:westwindhomeownersassoc@gmail.com">westwindhomeownersassoc@gmail.com</a></p></div>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-6a2 2 0 0 1 2-2h1"/><path d="M9 21V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v12"/><path d="M17 21v-9a2 2 0 0 1 2-2h1"/></svg></span>
+          <div><h3>Exterior Modification Questions</h3><p>Same address above. Use the subject line "ACC / Exterior Modification"</p></div>
+        </div>
+        <div class="contact-item">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+          <div><h3>Mailing Address</h3><p>Westwind Homeowners Association, Inc.<br>8100 Mountain Laurel Lane<br>Gaithersburg, MD 20879</p></div>
+        </div>
+        <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:22px;">For a specific board member, see the <a href="board.html" style="color:var(--pine);font-weight:700;">Board &amp; Contacts</a> page.</p>
+      </div>
+
+      <form class="form-card ww-form" id="contact-form" data-form="contact" data-subject="Westwind contact form" data-subject-field="topic" aria-label="Contact the board">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+          <img src="images/logo-icon.png" alt="Westwind HOA logo" style="height:44px;width:auto;">
+          <div>
+            <strong style="display:block;color:var(--ink);font-size:1.02rem;">Westwind Homeowners Association</strong>
+            <span style="font-size:0.82rem;color:var(--ink-soft);">Send the board a message</span>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+        <div class="field">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email <span class="req">*</span></label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cell-phone">Phone</label>
+          <input type="tel" id="cell-phone" name="phone" autocomplete="tel" placeholder="For a callback if needed">
+        </div>
+        <div class="field">
+          <label for="topic">Topic <span class="req">*</span></label>
+          <select id="topic" name="topic" required>
+            <option>General question</option>
+            <option>Exterior modification / ACC</option>
+            <option>Maintenance concern</option>
+            <option>Dues / billing</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message <span class="req">*</span></label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button class="btn btn-pine" type="submit" style="width:100%;justify-content:center;">Send Message</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p style="font-size:0.78rem;color:var(--ink-soft);margin:6px 0 0;">Your message goes straight to the board's inbox, and you get a confirmation email with a reference number.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

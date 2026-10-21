@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Street Parking | Westwind at Flower Hill</title>
+<meta name="description" content="What Westwind's Declaration and ACC Guidelines actually say about street parking, commercial vehicles, and unlicensed vehicles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .covenant-quote{
+    background: var(--pine-dark); color:#fff; border-radius: var(--radius);
+    padding: 30px 34px; box-shadow: var(--shadow);
+    font-family: var(--serif); font-size: 1.08rem; line-height: 1.55;
+  }
+  .covenant-quote cite{
+    display:block; margin-top:18px; font-family: var(--sans); font-style:normal;
+    font-size: 0.8rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color: var(--gold);
+  }
+  .rule-table{ display:flex; flex-direction:column; gap:12px; }
+  .rule-row{
+    display:grid; grid-template-columns: 1.4fr 2fr; gap:18px; align-items:center;
+    background: var(--surface); border-radius: var(--radius-sm); padding: 16px 20px;
+    box-shadow: var(--shadow-xs);
+  }
+  @media (max-width:640px){ .rule-row{ grid-template-columns:1fr; gap:6px; } }
+  .rule-row .cond{ font-weight:700; color:var(--pine-dark); font-size:0.96rem; }
+  .rule-row .outcome{ display:flex; align-items:center; gap:8px; font-size:0.94rem; }
+  .rule-row .outcome.needed{ color:#93662E; font-weight:700; }
+  .rule-row .outcome.not-needed{ color:#2E7D4F; font-weight:700; }
+</style>
+</head>
+<body>
+<!--
+STREET PARKING
+  Built from actual OCR'd text of the Declaration (Article on covenants,
+  Sections 12-13) and the 2012 ACC Guidelines. Source quotes are real,
+  extracted directly from the recorded PDFs in /pdfs/ -- not paraphrased
+  from memory. Key finding: Section 13 explicitly permits "a private
+  automobile" to be parked on the Properties (only non-private-auto
+  vehicle types and repair activity are restricted there); Section 12
+  requires ACC approval for commercial vehicles, boats, trailers, and
+  RVs; the ACC Guidelines separately confirm these are "county streets,"
+  i.e. public right-of-way, not privately owned by the HOA or by any one
+  homeowner. This page exists so the board has one link to send when a
+  resident complains about a neighbor's (or a visitor's) car parked on
+  the street.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html" aria-current="page">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Documents &rsaquo; Street Parking</span>
+      <h1>Street Parking</h1>
+      <p>A car parked on the street, in front of a house, isn't a violation of anything. Here's what Westwind's governing documents actually say, so the board has one place to point to when this comes up.</p>
+    </div>
+  </section>
+
+  <!-- The short version, up front, before the legal text -->
+  <section aria-labelledby="bottom-line-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <div class="body">
+          <h3 id="bottom-line-h">The Short Version</h3>
+          <p>The streets inside Westwind are county streets, not private property, and not owned by whichever house happens to be nearest. Under the Declaration, a private automobile is explicitly allowed to be parked there. Nobody needs permission to park a normal car on a public street, whether or not it's directly in front of your own house.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Declaration text, quoted directly (Sections 12 and 13 on commercial vehicles/RVs and repairs/unlicensed vehicles) -->
+  <section aria-labelledby="decl-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Straight from the Declaration</span>
+        <h2 id="decl-h">What's Actually Restricted</h2>
+        <p>The Declaration doesn't say anything special about parking directly in front of a house. What it does restrict is specific vehicle types, not where a private automobile can park.</p>
+      </div>
+      <blockquote class="covenant-quote">
+        &ldquo;No commercial truck, commercial bus, or other commercial vehicle of any kind, or any boat, boat trailer or recreational vehicle of any kind shall be permitted to be kept upon any portion of the Properties, except as approved by the Architectural Control Committee.&rdquo;
+        <cite>Declaration of Covenants, Conditions and Restrictions, on commercial vehicles and RVs</cite>
+      </blockquote>
+      <blockquote class="covenant-quote" style="margin-top:18px;">
+        &ldquo;No portion of the Properties shall be used for the repair of automobiles, trucks, motorcycles, vans or any other type of motor vehicle, nor shall any vehicles other than a private automobile be parked on any portion of the Properties. No unlicensed vehicle shall remain on the Properties for more than seventy-two (72) hours.&rdquo;
+        <cite>Declaration of Covenants, Conditions and Restrictions, on vehicle repair and unlicensed vehicles</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Plain-English .rule-table breakdown of the two quoted sections above -->
+  <section class="section-sage" aria-labelledby="plain-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">In plain English</span>
+        <h2 id="plain-h">What This Means in Practice</h2>
+      </div>
+      <div class="rule-table">
+        <div class="rule-row">
+          <span class="cond">A private automobile parked on the street</span>
+          <span class="outcome not-needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> Explicitly allowed, no approval needed</span>
+        </div>
+        <div class="rule-row">
+          <span class="cond">A commercial truck, bus, boat, boat trailer, or RV</span>
+          <span class="outcome needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Needs ACC approval to be kept on the Properties</span>
+        </div>
+        <div class="rule-row">
+          <span class="cond">Repairing a vehicle on the street or in a driveway</span>
+          <span class="outcome needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> Not permitted anywhere on the Properties</span>
+        </div>
+        <div class="rule-row">
+          <span class="cond">An unlicensed vehicle sitting for more than 72 hours</span>
+          <span class="outcome needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> The Association may have it removed at the owner's expense</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACC Guidelines quote confirming these are "county streets" (public right-of-way) -->
+  <section aria-labelledby="county-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Confirmed by the ACC Guidelines</span>
+        <h2 id="county-h">These Are County Streets</h2>
+        <p>The 2012 ACC Guidelines confirm the streets themselves are public right-of-way, maintained under county authority, not private Westwind property:</p>
+      </div>
+      <blockquote class="covenant-quote">
+        &ldquo;Per Montgomery County Code and HOA covenants, commercial vehicles are prohibited on your property (with the exception of your garage) and on county streets adjacent to homes or schools.&rdquo;
+        <cite>2012 ACC Guidelines</cite>
+      </blockquote>
+      <p style="margin-top:18px;font-size:0.92rem;color:var(--ink-soft);">Note this restriction, like the Declaration's, is specifically about <strong>commercial vehicles</strong>. It doesn't restrict where an ordinary personal car can park on a public street.</p>
+    </div>
+  </section>
+
+  <!-- "What actually needs a report" -- not-a-violation vs. worth-reporting examples -->
+  <section class="section-sage" aria-labelledby="what-to-do-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Got a complaint?</span>
+        <h2 id="what-to-do-h">What Actually Needs a Report</h2>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Not a violation</span>
+          <h3>A Neighbor's Car on the Street</h3>
+          <p>Even if it's not directly in front of their own house. Public streets aren't assigned parking.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Worth reporting</span>
+          <h3>A Commercial Vehicle, Boat, or RV</h3>
+          <p>Kept on a driveway, lawn, or street without ACC approval on file.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Worth reporting</span>
+          <h3>A Car That Hasn't Moved in Weeks</h3>
+          <p>Possibly unlicensed and past the 72-hour limit; worth flagging to the board.</p>
+        </div>
+      </div>
+      <p style="margin-top:20px;">To report a commercial vehicle, RV, or long-abandoned car, use the <a href="suspected-violations.html" style="color:var(--pine);font-weight:700;">Report a Violation</a> page.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

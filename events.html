@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Community Events | Westwind at Flower Hill</title>
+<meta name="description" content="Westwind community events: the neighbor meet-up, the twice-yearly community yard sale, and the bulk trash pickup that follows it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .event-hero{
+    position:relative; min-height: 360px; display:flex; align-items:flex-end;
+    background: linear-gradient(180deg, rgba(22,40,58,0.15) 0%, rgba(22,40,58,0.9) 88%), url('images/illustration-westwind-4.jpg');
+    background-size: cover; background-position: center 40%;
+  }
+  .event-hero .wrap{ padding-bottom: 50px; }
+  .event-hero h1{ color:#fff; }
+  .event-hero .eyebrow{ color: var(--gold); }
+  .event-hero p.lead{ color: rgba(255,255,255,0.9); max-width: 60ch; font-size:1.05rem; }
+  @media (max-width:700px){ .event-hero{ min-height: 300px; } }
+
+  .event-block{
+    display:grid; grid-template-columns: 84px 1fr; gap: 22px;
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow-sm); padding: 28px 30px; margin-bottom: 22px;
+  }
+  @media (max-width: 640px){ .event-block{ grid-template-columns: 1fr; } }
+  .event-badge{
+    width:84px; height:84px; border-radius: 16px; background: var(--sage); color: var(--pine);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    flex:none;
+  }
+  .event-badge svg{ width: 32px; height: 32px; }
+  .event-block h3{ margin: 0 0 6px; color: var(--pine-dark); font-size: 1.25rem; }
+  .event-block .freq{
+    display:inline-block; font-size:0.78rem; font-weight:700; letter-spacing:0.03em;
+    text-transform:uppercase; color: var(--gold-dark); margin-bottom:10px;
+  }
+  .event-block p{ margin: 0 0 10px; color: var(--ink); font-size: 0.98rem; }
+  .event-block p:last-child{ margin-bottom:0; }
+
+  .pair-connector{
+    display:flex; align-items:center; gap:12px; margin: -8px 0 22px 42px;
+    color: var(--pine); font-size:0.86rem; font-weight:700;
+  }
+  .pair-connector svg{ width:18px; height:18px; }
+  @media (max-width:640px){ .pair-connector{ margin-left:0; } }
+</style>
+</head>
+<body>
+<!--
+COMMUNITY EVENTS
+  Covers the neighbor pizza social and the paired yard-sale + bulk-trash
+  events. Bulk trash intentionally has NO separate page — it's presented
+  here as directly following the yard sale, since the two are meant to
+  be read together (board decision, see chat history).
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html" aria-current="page">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro, custom photo hero (see the <style> block up top for .event-hero) -->
+  <section class="event-hero">
+    <div class="wrap">
+      <span class="eyebrow">Get to know your neighbors</span>
+      <h1>Community Events</h1>
+      <p class="lead">Westwind is 185 households, not just 185 driveways. Here's how the board helps neighbors actually meet each other, and get some decluttering done along the way.</p>
+    </div>
+  </section>
+
+  <!-- Pizza Night: the neighbor meet-up event -->
+  <section aria-labelledby="social-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Come hungry</span>
+        <h2 id="social-h">Neighbor Meet-Up</h2>
+      </div>
+
+      <div class="event-block">
+        <span class="event-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+        </span>
+        <div>
+          <span class="freq">Free food &middot; open to everyone</span>
+          <h3>Westwind Pizza Night</h3>
+          <p>A casual, no-agenda get-together with free pizza and drinks at the Flower Hill Community Center, just an easy reason to put a face to the name on your neighbor's mailbox. Bring the kids, bring the dog, stay for ten minutes or the whole evening.</p>
+          <p>The board covers the food; just RSVP to <a href="mailto:westwindhomeownersassoc@gmail.com" style="color:var(--pine);font-weight:700;">westwindhomeownersassoc@gmail.com</a> with your address and how many are coming, so we know how much pizza to order. Flyers go out in English and Spanish ahead of time. <a href="pdfs/Westwind_Pizza_Night_Flyer.pdf" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">See a past flyer</a> for an idea of what to expect.</p>
+          <p style="font-size:0.86rem;color:var(--ink-soft);">Watch the <a href="newsletter.html" style="color:var(--pine);font-weight:700;">newsletter</a> and the <a href="index.html#announce-h" style="color:var(--pine);font-weight:700;">home page announcements</a> for the next date.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Yard Sale + Bulk Trash Pickup, shown together on purpose since bulk trash
+       follows directly after the yard sale (no separate page for bulk trash -- see
+       the top-of-file comment for why). Two .event-block divs with a ".pair-connector"
+       arrow between them. -->
+  <section class="section-sage" aria-labelledby="yardsale-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Twice a year</span>
+        <h2 id="yardsale-h">Community Yard Sale &amp; Bulk Trash Pickup</h2>
+        <p>These two go together on purpose. Sell what you can at the yard sale, then put whatever's left at the curb the following weekend instead of hauling it back inside.</p>
+      </div>
+
+      <div class="event-block">
+        <span class="event-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l1-5h16l1 5M4 9h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9Z"/><path d="M9 13a3 3 0 0 0 6 0"/></svg>
+        </span>
+        <div>
+          <span class="freq">Twice a year</span>
+          <h3>Community Yard Sale</h3>
+          <p>Westwind homeowners hold their sales the same weekend, so buyers can treat the whole neighborhood as one big sale, with more traffic for everyone than going it alone. Set up in your own driveway or yard; no registration needed.</p>
+          <p>Exact dates are announced through the <a href="newsletter.html" style="color:var(--pine);font-weight:700;">newsletter</a> ahead of each sale, typically one in spring and one in fall.</p>
+        </div>
+      </div>
+
+      <div class="pair-connector">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+        Then, the following weekend
+      </div>
+
+      <div class="event-block">
+        <span class="event-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0-1 14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L4 6h16Z"/><path d="M10 11v6M14 11v6"/></svg>
+        </span>
+        <div>
+          <span class="freq">Twice a year &middot; follows the yard sale</span>
+          <h3>Bulk Trash Pickup</h3>
+          <p>Whatever didn't sell doesn't have to go back in the garage. The board contracts with a bulk trash vendor for each pickup (a company called B &amp; B Inc. handled it most recently); the exact vendor and date are announced through the <a href="newsletter.html" style="color:var(--pine);font-weight:700;">newsletter</a> alongside the yard sale date, since it can change year to year.</p>
+          <p style="font-weight:700;color:var(--pine-dark);margin-bottom:6px;">Leave items at the curb the evening before pickup day.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px;">
+            <div>
+              <span style="font-size:0.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#2E7D4F;">Accepted</span>
+              <ul class="pill-list" style="margin-top:8px;">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Couches, chairs &amp; desks</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Mattresses</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Grills &amp; small appliances</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Sewing machines</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Dried-out paint cans, uncovered</li>
+              </ul>
+            </div>
+            <div>
+              <span style="font-size:0.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#93662E;">Not accepted</span>
+              <ul class="pill-list" style="margin-top:8px;">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Building debris &amp; roofing material</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Full-size refrigerators &amp; stoves</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Washing machines &amp; dryers</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg> Gas tanks or other hazardous material</li>
+              </ul>
+            </div>
+          </div>
+
+          <p style="margin-top:14px;">For general bulk trash rules outside of these community pickups, see <a href="resources.html" style="color:var(--pine);font-weight:700;">County &amp; Utility Resources</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing callout: invites volunteers to help organize future events -->
+  <section aria-labelledby="reach-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 8v8M8 12h8"/><circle cx="12" cy="12" r="9"/></svg></span>
+        <div class="body">
+          <h3 id="reach-h">Have an Idea for a Community Event?</h3>
+          <p>Block parties, holiday get-togethers, a neighborhood clean-up day: if you'd like to help organize something, reach out through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a>. Volunteers make these events happen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

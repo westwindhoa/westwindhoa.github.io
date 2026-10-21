@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rental &amp; Property Manager Registration | Westwind at Flower Hill</title>
+<meta name="description" content="Westwind homeowners: register whether your home is owner-occupied, rented, or managed by an outside company, and keep tenant and property manager contact information current with the board.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+RENTAL & PROPERTY MANAGER REGISTRATION
+  A <form data-form="rental"> (submitted by forms.js to the Google Apps Script
+  web app, same pattern as documents.html's ACC form and contact.html)
+  collecting occupancy status, tenant info, and property management contact
+  info. Each submission is logged in the Rental Registrations sheet.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html" aria-current="page">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Keep the board's records current</span>
+      <h1>Rental &amp; Property Manager Registration</h1>
+      <p>Whether you live in your home, rent it out, or use a property management company, the board asks every homeowner to keep this information on file.</p>
+      <div style="margin-top:18px;">
+        <a class="btn btn-gold" href="#register">Fill Out the Registration Form &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why the board asks for this -->
+  <section aria-labelledby="why-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <div class="body">
+          <h3 id="why-h">Why the Board Asks for This</h3>
+          <p>If a home is rented or professionally managed, the board needs a working way to reach whoever is actually responsible day-to-day for ACC matters, maintenance concerns, and general notices. This isn't about restricting rentals. It's about making sure the right person gets contacted when something comes up, and that mail or notices sent to a vacant house don't just pile up unread.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who should fill this out: owner-occupied / rented / professionally managed -->
+  <section class="section-sage" aria-labelledby="who-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Every household</span>
+        <h2 id="who-h">Who Should Fill This Out</h2>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Owner-occupied</span>
+          <h3>You Live in Your Home</h3>
+          <p>A quick confirmation with your own current contact info is all that's needed.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Rented</span>
+          <h3>You Rent Your Home Out</h3>
+          <p>Let the board know your current tenant's name and contact information, and your own, since notices still go to the owner of record.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Professionally managed</span>
+          <h3>An Outside Company Manages It</h3>
+          <p>Share the management company's name and the best contact there, so day-to-day issues can go straight to them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN FORM starts here. Submitted by forms.js. The field list and the email the board
+       receives are defined in westwind-forms-apps-script.gs. -->
+  <section id="register" aria-labelledby="form-h" style="scroll-margin-top:96px;">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="form-h" style="font-size:1.5rem;">Register or Update Your Information</h2>
+        <p>This takes a few minutes. Rented homes have a few extra questions about the tenant. If anything changes later, such as a new tenant or a new management company, just fill it out again with the updated details.</p>
+        <p style="font-size:0.86rem;color:var(--ink-soft);">Your information is used by the board only, for association purposes. It isn't published on this site.</p>
+      </div>
+
+      <form class="form-card ww-form" id="rental-form" data-form="rental" data-subject="Rental &amp; Property Manager Registration" data-subject-field="address" aria-label="Rental and property manager registration">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+          <img src="images/logo-icon.png" alt="Westwind HOA logo" style="height:44px;width:auto;">
+          <div>
+            <strong style="display:block;color:var(--ink);font-size:1.02rem;">Westwind Homeowners Association</strong>
+            <span style="font-size:0.82rem;color:var(--ink-soft);">Rental &amp; Property Manager Registration</span>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+
+        <h3 class="form-section-h">Homeowner</h3>
+        <div class="field">
+          <label for="address">Property address in Westwind <span class="req">*</span></label>
+          <input type="text" id="address" name="address" autocomplete="street-address" required>
+        </div>
+        <div class="field">
+          <label for="owner-name">Homeowner name(s) <span class="req">*</span></label>
+          <input type="text" id="owner-name" name="owner_name" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="owner-phone">Homeowner phone <span class="req">*</span></label>
+            <input type="tel" id="owner-phone" name="owner_phone" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="owner-email">Homeowner email <span class="req">*</span></label>
+            <input type="email" id="owner-email" name="owner_email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="owner-mailing">Owner mailing address (if different from the property)</label>
+          <input type="text" id="owner-mailing" name="owner_mailing" autocomplete="off" placeholder="Where HOA notices and statements should be mailed">
+        </div>
+
+        <div class="field">
+          <label for="occupancy">Current occupancy <span class="req">*</span></label>
+          <select id="occupancy" name="occupancy" required>
+            <option>Owner-occupied</option>
+            <option>Rented</option>
+            <option>Vacant</option>
+          </select>
+        </div>
+
+        <!-- Shown only when occupancy = Rented -->
+        <fieldset class="form-section" id="tenant-section" hidden>
+          <legend>Tenant information</legend>
+          <div class="field">
+            <label for="tenant-name">Tenant name(s) on the lease <span class="req">*</span></label>
+            <input type="text" id="tenant-name" name="tenant_name" data-need="rented">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="tenant-phone">Tenant phone <span class="req">*</span></label>
+              <input type="tel" id="tenant-phone" name="tenant_phone" data-need="rented">
+            </div>
+            <div class="field">
+              <label for="tenant-email">Tenant email</label>
+              <input type="email" id="tenant-email" name="tenant_email">
+            </div>
+          </div>
+          <div class="field">
+            <label for="tenant-occupants">Everyone living in the home (names and ages of other adults and children)</label>
+            <textarea id="tenant-occupants" name="tenant_occupants" rows="3" placeholder="Example: Jane Smith (adult), Tom Smith (adult), Ava Smith (age 8)"></textarea>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="lease-start">Lease start date <span class="req">*</span></label>
+              <input type="date" id="lease-start" name="lease_start" data-need="rented">
+            </div>
+            <div class="field">
+              <label for="lease-end">Lease end date</label>
+              <input type="date" id="lease-end" name="lease_end">
+              <span class="hint">Leave blank for month-to-month.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="tenant-vehicles">Tenant vehicles (make, color, license plate)</label>
+            <textarea id="tenant-vehicles" name="tenant_vehicles" rows="2" placeholder="Helps with street parking and guest questions"></textarea>
+          </div>
+          <div class="field">
+            <label for="tenant-pets">Pets (type and number)</label>
+            <input type="text" id="tenant-pets" name="tenant_pets" placeholder="None, or example: 1 dog, 1 cat">
+          </div>
+          <div class="field">
+            <label for="tenant-emergency">Emergency contact for the tenant (name and phone)</label>
+            <input type="text" id="tenant-emergency" name="tenant_emergency">
+          </div>
+          <label class="check">
+            <input type="checkbox" id="ack-rules" name="ack_rules" data-need="rented">
+            <span>I have given my tenant(s) a copy of the Westwind guidelines (parking, trash, pets, exterior rules) and understand the homeowner remains responsible for the property <span class="req">*</span></span>
+          </label>
+        </fieldset>
+
+        <!-- Shown only when occupancy = Vacant -->
+        <fieldset class="form-section" id="vacant-section" hidden>
+          <legend>Vacant home</legend>
+          <div class="field">
+            <label for="vacant-contact">Who should the board call about upkeep while the home is empty? (name and phone) <span class="req">*</span></label>
+            <input type="text" id="vacant-contact" name="vacant_contact" data-need="vacant">
+          </div>
+          <div class="field">
+            <label for="vacant-date">Expected date it will be occupied again</label>
+            <input type="date" id="vacant-date" name="vacant_date">
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="management">Who manages the property day to day? <span class="req">*</span></label>
+          <select id="management" name="management" required>
+            <option>Self-managed by homeowner</option>
+            <option>Managed by an outside company</option>
+          </select>
+        </div>
+
+        <!-- Shown only when an outside company manages it -->
+        <fieldset class="form-section" id="mgmt-section" hidden>
+          <legend>Property management company</legend>
+          <div class="field">
+            <label for="mgmt-company">Company name <span class="req">*</span></label>
+            <input type="text" id="mgmt-company" name="mgmt_company" data-need="managed">
+          </div>
+          <div class="field">
+            <label for="mgmt-contact">Contact person at the company <span class="req">*</span></label>
+            <input type="text" id="mgmt-contact" name="mgmt_contact" data-need="managed">
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="mgmt-phone">Office phone <span class="req">*</span></label>
+              <input type="tel" id="mgmt-phone" name="mgmt_phone" data-need="managed">
+            </div>
+            <div class="field">
+              <label for="mgmt-email">Email</label>
+              <input type="email" id="mgmt-email" name="mgmt_email">
+            </div>
+          </div>
+          <div class="field">
+            <label for="mgmt-after-hours">After-hours or emergency phone</label>
+            <input type="tel" id="mgmt-after-hours" name="mgmt_after_hours">
+          </div>
+          <div class="field">
+            <label for="mgmt-address">Company mailing address</label>
+            <input type="text" id="mgmt-address" name="mgmt_address">
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="rental-notes">Anything else the board should know</label>
+          <textarea id="rental-notes" name="notes" rows="3"></textarea>
+        </div>
+
+        <button class="btn btn-pine" type="submit" style="width:100%;justify-content:center;">Submit</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p style="font-size:0.78rem;color:var(--ink-soft);margin:6px 0 0;">Your registration goes straight to the board. Add your email above if you would like a confirmation receipt.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+<script>
+(function () {
+  var f = document.getElementById('rental-form');
+  if (!f) return;
+  var occ = f.elements.occupancy, mg = f.elements.management;
+  var sec = { rented: document.getElementById('tenant-section'), vacant: document.getElementById('vacant-section'), managed: document.getElementById('mgmt-section') };
+  function apply(key, on) {
+    sec[key].hidden = !on;
+    sec[key].querySelectorAll('[data-need="' + key + '"]').forEach(function (i) { i.required = on; });
+  }
+  function update() {
+    apply('rented', occ.value === 'Rented');
+    apply('vacant', occ.value === 'Vacant');
+    apply('managed', mg.value === 'Managed by an outside company');
+  }
+  occ.addEventListener('change', update);
+  mg.addEventListener('change', update);
+  f.addEventListener('reset', function () { setTimeout(update, 0); });
+  update();
+})();
+</script>
+
+</body>
+</html>

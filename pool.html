@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Flower Hill Pool | Westwind at Flower Hill</title>
+<meta name="description" content="Everything you need for the Flower Hill Community pool: how to register at Membersplash, hours, and the pool rules in plain language.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .pool-hero{
+    position:relative; min-height: 420px; display:flex; align-items:flex-end;
+    background: linear-gradient(180deg, rgba(22,40,58,0.1) 0%, rgba(22,40,58,0.88) 90%), url('images/photo-pool-action.jpg');
+    background-size: cover; background-position: center 35%;
+  }
+  .pool-hero .wrap{ padding-bottom: 54px; }
+  .pool-hero h1{ color:#fff; }
+  .pool-hero .eyebrow{ color: var(--gold); }
+  .pool-hero p.lead{ color: rgba(255,255,255,0.9); max-width: 60ch; font-size:1.05rem; }
+  @media (max-width:700px){ .pool-hero{ min-height: 340px; } }
+
+  .rule-group{
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    padding: 24px 26px; box-shadow: var(--shadow-sm);
+  }
+  .rule-group h3{
+    display:flex; align-items:center; gap:10px; margin-bottom:14px; color:var(--pine-dark);
+  }
+  .rule-group h3 .num{
+    width:30px; height:30px; border-radius:50%; background:var(--sage); color:var(--pine);
+    display:flex; align-items:center; justify-content:center; font-size:0.85rem; font-weight:700; flex:none;
+  }
+  .rule-group ul{ margin:0; padding-left: 20px; display:flex; flex-direction:column; gap:8px; }
+  .rule-group li{ font-size:0.93rem; color:var(--ink); }
+  .rule-group li strong{ color:var(--pine-dark); }
+  .rule-groups-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
+  @media (max-width:820px){ .rule-groups-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<!--
+POOL
+  Membersplash registration walkthrough + the pool rulebook reorganized
+  into scannable categories, both sourced from flowerhill.org. Has its
+  own <style> block up top (a photo hero + .rule-group cards) rather
+  than everything living in the shared style.css — page-specific
+  patterns like this are fine as long as they still use the shared
+  CSS variables (var(--pine) etc.) rather than hardcoded colors.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html" aria-current="page">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro, custom photo hero (see the <style> block up top for .pool-hero) -->
+  <section class="pool-hero">
+    <div class="wrap">
+      <span class="eyebrow">Community &rsaquo; Pool</span>
+      <h1>The Flower Hill Pool</h1>
+      <p class="lead">Three pools, a diving well, and a whole summer of it. The pool is one of the best reasons to live here, and a meaningful part of what your HOA dues support. Here's everything you need to get in the gate.</p>
+    </div>
+  </section>
+
+  <!-- Membersplash registration walkthrough -->
+  <section aria-labelledby="register-h">
+    <div class="wrap">
+      <div class="callout" style="background:var(--sage);border-color:var(--gold);">
+        <span class="icon" style="background:var(--gold);color:var(--pine-dark);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg></span>
+        <div class="body">
+          <h3 id="register-h">You Must Register Online Before You Can Get In</h3>
+          <p>All persons using the pool are required to register online at Membersplash for pool access to gain admission. Only homeowners or residents with a valid, current lease may register. Leases can be provided through the registration link or to the onsite office. Once registered, add every household member to your account, including a photo if possible; anyone without a photo on file needs to bring a photo ID to the pool desk.</p>
+          <div style="margin-top:16px;">
+            <a class="btn btn-gold" href="https://flowerhill.membersplash.com/membership/register-account/" target="_blank" rel="noopener">Register at Membersplash &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="rule-group" style="margin-top:22px;">
+        <h3><span class="num">&#10003;</span> Step by step</h3>
+        <ul>
+          <li>Go to the <a href="https://flowerhill.membersplash.com/" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Membersplash registration page</a> and click <strong>"Register an Account"</strong> in the upper right.</li>
+          <li>Set up your email and password, and enter your name, address, and sub-association (Westwind).</li>
+          <li>Renting? Upload your current lease where it says <strong>"Renter Proof of Residency."</strong></li>
+          <li>Submit, then allow at least 1 business day for review and activation.</li>
+          <li>Once activated, log back in and add household members' names, birthdates, and photos if you can.</li>
+          <li>That's it. Head to the pool and give the lifeguards your name. No photo on file just means bringing an ID.</li>
+        </ul>
+        <p style="font-size:0.86rem;color:var(--ink-soft);margin:14px 0 0;">You only register once, ever. No need to re-register next season. If your household changes, just log back in and update it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI illustration banner (images/illustration-westwind-7.jpg) -->
+  <section class="photo-banner" style="background-image:url('images/illustration-westwind-7.jpg');" aria-labelledby="pool-banner-h">
+    <div class="wrap">
+      <div class="photo-banner-content">
+        <span class="eyebrow">Open all summer</span>
+        <h2 id="pool-banner-h">Lap Lanes, Lounge Chairs, and the Snack Shack</h2>
+        <p>The Flower Hill pool is a five-minute walk for most Westwind homes. Bring a towel and your Membersplash pass.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- General "about the pool" facts -->
+  <section aria-labelledby="about-pool-h">
+    <div class="wrap feature">
+      <div>
+        <span class="eyebrow">Three pools, one complex</span>
+        <h2 id="about-pool-h">What's Actually There</h2>
+        <p>The Flower Hill pool complex includes a wading pool for little ones, a dedicated lap pool, and a 50-meter main pool with 25-meter lap lanes, a children's area, and a diving well. There's plenty of room for lap swimmers, swim team practice, and everyone just there to cool off.</p>
+      </div>
+      <div class="feature-art" style="padding:0;overflow:hidden;">
+        <img src="images/photo-pool-lanes.jpg" alt="Lap lanes at the Flower Hill pool" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pool hours/season section -->
+  <section class="section-sage" aria-labelledby="hours-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Memorial Day &ndash; Labor Day</span>
+        <h2 id="hours-h">Hours Follow the School Calendar</h2>
+        <p>Exact opening/closing dates shift a little each year with the school calendar and holidays. Always double-check the current-season dates on FHCC's site before you head over. The general pattern:</p>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Before Summer Break</span>
+          <h3>School Still in Session</h3>
+          <p>Weekdays: 4&ndash;8 PM<br>Weekends &amp; holidays: 12&ndash;8 PM</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Summer Vacation</span>
+          <h3>Every Day</h3>
+          <p>12&ndash;8 PM, daily, for the full stretch of summer break.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Back to School Week</span>
+          <h3>School Back in Session</h3>
+          <p>Weekdays: 4&ndash;8 PM<br>Weekends &amp; holidays: 12&ndash;8 PM, through Labor Day.</p>
+        </div>
+      </div>
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:20px;">The pool itself: <a href="tel:3012081553" style="color:var(--pine);font-weight:700;">301-208-1553</a>. Note that FHCC's onsite management office (Mon&ndash;Fri, 9 AM&ndash;5 PM) is a separate office from the pool and is not open during pool hours. For after-hours management questions, use the <a href="flower-hill-central.html" style="color:var(--pine);font-weight:700;">Flower Hill Central</a> contact info.</p>
+    </div>
+  </section>
+
+  <!-- Pool rules, reorganized from the official 33-rule rulebook into scannable .rule-group categories -->
+  <section aria-labelledby="rules-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">The important stuff, organized</span>
+        <h2 id="rules-h">Pool Rules, in Plain Language</h2>
+        <p>These are FHCC's official rules, grouped by topic so you can actually find what you're looking for. Breaking any of these can mean removal from the pool for the day, and repeat issues go to the Board.</p>
+      </div>
+
+      <div class="rule-groups-grid">
+
+        <div class="rule-group">
+          <h3><span class="num">1</span> Getting In</h3>
+          <ul>
+            <li>Register online at Membersplash before your first visit. No exceptions.</li>
+            <li>Add photos for household members if you can; no photo on file means bring an ID.</li>
+            <li>Guests need a registered member 16+ with them to sign in.</li>
+            <li>Each account gets 10 free guest credits a year; extra credits are $15 per 10, purchased at the office (check or money order only, no cash or card; lifeguards can't process payments).</li>
+            <li>Max 5 guest passes per account per day.</li>
+            <li><strong>No one under 13</strong> is allowed in without a resident or patron 16 or older. No exceptions.</li>
+          </ul>
+        </div>
+
+        <div class="rule-group">
+          <h3><span class="num">2</span> Safety &amp; Supervision</h3>
+          <ul>
+            <li>Lifeguards' instructions are final. Dangerous conduct can mean an on-the-spot ban.</li>
+            <li>Adult swim / rest periods happen at staff discretion; "adult" means 16+.</li>
+            <li>Only kids 7 and under may use the wading pool, and supervision there is the parent's job, not the lifeguards'.</li>
+            <li>No diving except at the diving well. The main pool is never an "open well."</li>
+            <li>No prolonged breath-holding or distance underwater swimming.</li>
+            <li>Life preservers aren't permitted; inner tubes/flotation devices are allowed at lifeguard discretion, and non-water-safe kids using them must stay within reach of a water-safe adult.</li>
+          </ul>
+        </div>
+
+        <div class="rule-group">
+          <h3><span class="num">3</span> Health &amp; Hygiene</h3>
+          <ul>
+            <li>Shower before swimming. This one's required.</li>
+            <li>Admission can be refused for skin abrasions, colds, coughs, eye infections, or bandages.</li>
+            <li>Non-potty-trained kids need rubber pants <em>and</em> a swim diaper. Regular disposable diapers aren't allowed in the water.</li>
+            <li>No spitting, nose-blowing, or introducing dirt into the pool.</li>
+          </ul>
+        </div>
+
+        <div class="rule-group">
+          <h3><span class="num">4</span> Conduct</h3>
+          <ul>
+            <li>No running, pushing, dunking, wrestling, or horseplay.</li>
+            <li>No abusive or profane language, and no fighting. Fighting means suspension and Board review.</li>
+            <li>Never touch a lifeguard during a dispute, and lifeguards won't touch patrons either.</li>
+            <li>A lifeguard can suspend you on the spot; if that happens, leave the pool area immediately. The onsite manager will follow up within 48 hours.</li>
+          </ul>
+        </div>
+
+        <div class="rule-group">
+          <h3><span class="num">5</span> What to Leave at Home</h3>
+          <ul>
+            <li>No glass anywhere in the pool area.</li>
+            <li>No bikes, scooters, roller skates/blades, hoverboards, or skateboards. Lifeguards will hold them until you leave.</li>
+            <li>No smoking or vaping anywhere in the facility.</li>
+            <li>No alcohol, and no admission if you appear to be under the influence.</li>
+            <li>No pets.</li>
+            <li>No loud stereos or TVs.</li>
+          </ul>
+        </div>
+
+        <div class="rule-group">
+          <h3><span class="num">6</span> Food, Trash &amp; Property</h3>
+          <ul>
+            <li>Eating and drinking only in designated areas; non-alcoholic drinks in spill-proof containers (or water) are fine anywhere.</li>
+            <li>All trash goes in containers. Help keep the area clean.</li>
+            <li>Members are responsible for their guests' actions, including any property damage.</li>
+            <li>FHCC and management aren't responsible for lost or damaged personal property.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:24px;">This is a plain-language summary of FHCC's official pool rules for quick reference. If anything here ever seems to conflict with the official version, the official rules and regulations control.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

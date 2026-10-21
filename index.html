@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Westwind at Flower Hill</title>
+<meta name="description" content="Westwind is a sub-association of the Flower Hill community in Gaithersburg, Maryland. Find board contacts, governing documents, and the exterior modification request form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+HOMEPAGE
+  Sections top to bottom: .hero (headline + stat panel) -> quick-link
+  .cards grid -> .announce-list (hand-edit these <div class="announce">
+  blocks directly in this file to add/remove announcements — newest
+  should go first) -> two .photo-banner illustration strips -> About
+  Westwind two-col .feature section. See style.css's table of contents
+  for what each class does.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Homepage hero: headline + CTA buttons + .hero-panel stat grid on the right -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Westwind &middot; Flower Hill &middot; Gaithersburg, MD</span>
+        <h1>Welcome to Westwind</h1>
+        <p class="lead">Westwind is the sub-association of the Flower Hill community, home to 185 households since 1985. This site is where you'll find board contacts, governing documents, and community forms.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="documents.html#acc">Submit an Exterior Modification Request</a>
+          <a class="btn btn-outline" href="documents.html">Browse Documents</a>
+        </div>
+      </div>
+      <div class="hero-panel">
+        <div class="hero-stat">
+          <span class="n">185</span>
+          <span class="l">Homes</span>
+        </div>
+        <div class="hero-stat">
+          <span class="n">1985</span>
+          <span class="l">Established</span>
+        </div>
+        <div class="hero-stat">
+          <span class="n">100%</span>
+          <span class="l">Volunteer board</span>
+        </div>
+        <div class="hero-stat">
+          <span class="n">3rd Wed</span>
+          <span class="l">Monthly meeting</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick-link cards grid, one per major site section -->
+  <section aria-labelledby="quicklinks-h">
+
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get to it quickly</span>
+        <h2 id="quicklinks-h">Everything the Board Publishes, in One Place</h2>
+      </div>
+      <div class="cards">
+        <a class="card" href="documents.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></svg></span>
+          <h3>Documents &amp; Forms</h3>
+          <p>CC&amp;Rs, bylaws, ACC guidelines, meeting minutes, and community forms.</p>
+          <span class="go">Browse the library &rarr;</span>
+        </a>
+        <a class="card" href="documents.html#acc">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-6a2 2 0 0 1 2-2h1"/><path d="M9 21V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v12"/><path d="M17 21v-9a2 2 0 0 1 2-2h1"/></svg></span>
+          <h3>Exterior Modification</h3>
+          <p>Planning a change to your home's exterior? Start with the ACC request form.</p>
+          <span class="go">Get the form &rarr;</span>
+        </a>
+        <a class="card" href="fences.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9m0 12h4m-4-8 4-4m4 12V5m0 16h4m-4-16 4 4m4 8v8m0-8-4 4m4-4-4-4"/></svg></span>
+          <h3>Fences &amp; Gates</h3>
+          <p>Split-rail and A-frame gate standards: recommended vs. non-recommended styles.</p>
+          <span class="go">See the standard &rarr;</span>
+        </a>
+        <a class="card" href="board.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><circle cx="17.5" cy="9" r="2.6"/><path d="M15 20a4.8 4.8 0 0 1 8 0"/></svg></span>
+          <h3>Board &amp; Contacts</h3>
+          <p>Meet the volunteer board and find the right contact for your question.</p>
+          <span class="go">Meet the board &rarr;</span>
+        </a>
+        <a class="card" href="community.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3>Community</h3>
+          <p>Report a violation, county &amp; utility resources, the swim team, and Flower Hill Central.</p>
+          <span class="go">Explore &rarr;</span>
+        </a>
+        <a class="card" href="contact.html">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <h3>Contact</h3>
+          <p>Reach the board with a general question, concern, or maintenance report.</p>
+          <span class="go">Get in touch &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements list. Edit the <div class="announce"> blocks directly to add/remove -->
+  <section class="section-sage" aria-labelledby="announce-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Community news</span>
+        <h2 id="announce-h">Announcements</h2>
+      </div>
+      <div class="announce-list">
+        <article class="announce">
+          <span class="date">Reminder</span>
+          <div>
+            <h3>Planning a Fence or Gate? Read This First</h3>
+            <p>Split-rail fences with an A-frame gate are the only approved style. See the full <a href="fences.html" style="color:var(--pine);font-weight:700;">Fence &amp; Gate Guidelines</a> before you buy materials or hire a contractor.</p>
+          </div>
+        </article>
+        <article class="announce">
+          <span class="date">Month 00</span>
+          <div>
+            <h3>Sample Announcement Headline</h3>
+            <p>Each announcement card supports a short headline and a couple of sentences. Link out to a document or the contact page if more detail is needed.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI illustration banner #1 (images/illustration-westwind-2.jpg): "Colonial character" tagline -->
+  <section class="photo-banner" style="background-image:url('images/illustration-westwind-2.jpg');" aria-labelledby="banner-h">
+    <div class="wrap">
+      <div class="photo-banner-content">
+        <span class="eyebrow">Since 1985</span>
+        <h2 id="banner-h">Traditional Architecture, Tree-Lined Streets</h2>
+        <p>185 homes built by Pettit &amp; Griffin, cared for by the neighbors who live in them.</p>
+      </div>
+    </div>
+</section>
+
+  <!-- Resident tour slideshow: embedded from a Google Slides deck the board maintains
+       separately (not built by this codebase). To replace it, get a new "Publish to
+       web" embed link from Google Slides (File -> Share -> Publish to web -> Embed)
+       and swap the whole <iframe> below. -->
+  <section class="resident-tour" aria-labelledby="tour-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">New Here?</span>
+        <h2 id="tour-h">A Two-Minute Tour of This Site</h2>
+        <p>Where to find things, how to submit a request, and how to reach the board &mdash; walked through in a few slides.</p>
+      </div>
+      <div class="resident-tour-frame">
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSg5ejf_ZoJzUI16e0HZeJhQXh47-kD03OIsbSScCFwnMo5fUvQ2iq-nc2mOUo3lOGJeRH_fJrhof8k/pubembed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="A tour of the Westwind website"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI illustration banner #2 (images/illustration-westwind-8.jpg, aerial neighborhood view): "Did you know?" trivia, sourced from a real 2026 Washington Post feature -->
+  <section class="photo-banner" style="background-image:url('images/illustration-westwind-8.jpg');" aria-labelledby="trivia-h">
+    <div class="wrap">
+      <div class="photo-banner-content">
+        <span class="eyebrow">Did you know?</span>
+        <h2 id="trivia-h">A Few Things That Make Flower Hill, Flower Hill</h2>
+        <p>Longtime resident Sonya Barnette told the Washington Post that <cite>"the circle that encompasses the common area is exactly a mile,"</cite> a favorite of Westwind residents and a draw for walkers from neighboring communities too. Nike Missile Park, one of two parks serving the area, sits on the site of a former Cold War&ndash;era Nike missile base. Flower Hill has also been home to NFL players Stefon and Trevon Diggs, who spent their teenage years here.</p>
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.65);">Source: <a href="https://www.washingtonpost.com/business/2022/01/26/where-we-live-flower-hill/" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.85);font-weight:700;">The Washington Post's 2022 "Where We Live" feature</a> on Flower Hill.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Westwind: real photo + facts + street names -->
+  <section aria-labelledby="about-h">
+    <div class="wrap feature">
+      <div>
+        <span class="eyebrow">About Westwind</span>
+        <h2 id="about-h">185 Homes, Built to Last Since 1985</h2>
+        <p>Westwind is a sub-association within the larger Flower Hill community, governed by its own Declaration of Covenants, Bylaws, and Architectural Control Committee (ACC) guidelines. The board is entirely volunteer-run by neighbors who live here.</p>
+        <ul class="pill-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Self-managed, volunteer board</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Governed under Maryland HOA law</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Original architecture by Pettit &amp; Griffin</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Gardenia Way, Cape Jasmine Way, and a portion of Flower Hill Way</li>
+        </ul>
+      </div>
+      <div class="feature-art" style="padding:0;overflow:hidden;">
+        <img src="images/photo-road-sign.jpg" alt="Flower Hill, Maryland community road sign" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

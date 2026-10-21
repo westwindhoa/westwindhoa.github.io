@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Library | Westwind at Flower Hill</title>
+<meta name="description" content="Every Westwind governing document, dated and downloadable, in one library.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+DOCUMENT LIBRARY
+  Every governing document + form + reference PDF as a .lib-row, each
+  with a "View" (opens the PDF inline — see script.js §4) and "Download"
+  action. This is the ONE place all the real source PDFs are listed —
+  documents.html and fences.html only link out to a couple of these
+  directly for convenience, this page is the full set.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html" aria-current="page">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Every document, one place</span>
+      <h1>Document Library</h1>
+      <p>All of Westwind's governing documents, dated and downloadable. For the exterior modification form and ACC guidance, see <a href="documents.html" style="color:var(--gold);">Documents &amp; Forms</a> instead.</p>
+    </div>
+</section>
+
+  <!-- Full document table (7 real governing docs/forms). Each row has a View button
+       (opens the PDF inline, see script.js section 4) and a Download link. To add a
+       new document, copy one .lib-row block and update the href, title, tag, and date. -->
+  <section aria-labelledby="library-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Sorted oldest to newest</span>
+        <h2 id="library-h">All Documents</h2>
+      </div>
+
+      <div class="lib-table reveal">
+        <div class="lib-row lib-head">
+          <span>Document</span>
+          <span>Category</span>
+          <span>Date</span>
+          <span></span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Declaration of Covenants, Conditions &amp; Restrictions</span>
+          <span class="lib-tag">Governing</span>
+          <span class="lib-date">Recorded Apr 4, 1984</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Declaration_of_CCRs.pdf" data-pdf-title="Declaration of Covenants, Conditions &amp; Restrictions">View</button>
+            &middot; <a href="pdfs/Westwind_Declaration_of_CCRs.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Articles of Incorporation</span>
+          <span class="lib-tag">Governing</span>
+          <span class="lib-date">Approved Apr 5, 1984</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Articles_of_Incorporation.pdf" data-pdf-title="Articles of Incorporation">View</button>
+            &middot; <a href="pdfs/Westwind_Articles_of_Incorporation.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Bylaws (with 2000 Amendments)</span>
+          <span class="lib-tag">Governing</span>
+          <span class="lib-date">Adopted 1984 &middot; Amended Apr 19, 2000</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Bylaws_and_Amendments.pdf" data-pdf-title="Bylaws (with 2000 Amendments)">View</button>
+            &middot; <a href="pdfs/Westwind_Bylaws_and_Amendments.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">ACC Guidelines</span>
+          <span class="lib-tag">ACC</span>
+          <span class="lib-date">2012</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_ACC_Guidelines_2012.pdf" data-pdf-title="ACC Guidelines">View</button>
+            &middot; <a href="pdfs/Westwind_ACC_Guidelines_2012.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Recommended Split-Rail Gate Styles</span>
+          <span class="lib-tag">ACC</span>
+          <span class="lib-date">Reference sheet</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Recommended_Split-Rail_Gate_Styles.pdf" data-pdf-title="Recommended Split-Rail Gate Styles">View</button>
+            &middot; <a href="pdfs/Westwind_Recommended_Split-Rail_Gate_Styles.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Exterior Modification Request Form (fillable)</span>
+          <span class="lib-tag">Form</span>
+          <span class="lib-date">Current</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Exterior_Modification_Request.pdf" data-pdf-title="Exterior Modification Request Form">View</button>
+            &middot; <a href="pdfs/Westwind_Exterior_Modification_Request.pdf" download target="_blank" rel="noopener">Download &darr;</a>
+          </span>
+        </div>
+
+        <div class="lib-row">
+          <span class="lib-title">Homeowner Reference Packet</span>
+          <span class="lib-tag">Reference</span>
+          <span class="lib-date">Compiled packet</span>
+          <span class="lib-dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Not_for_Resale_Docs.pdf" data-pdf-title="Homeowner Reference Packet">View</button>
+            &middot; <a href="pdfs/Westwind_Not_for_Resale_Docs.pdf" download>Download &darr;</a>
+          </span>
+        </div>
+      </div>
+
+      <p style="font-size:0.82rem;color:var(--ink-soft);margin-top:18px;">The Homeowner Reference Packet is marked "not for resale" by the source scan. For official resale disclosure documents, contact the board directly rather than using this file.</p>
+
+      <div class="callout" style="margin-top:26px;">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></span>
+        <div class="body">
+          <h3>Selling Your Home?</h3>
+          <p>The documents on this page are for reference. The official resale package required for closing is obtained separately through <a href="https://www.homewisedocs.com/" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">HomeWiseDocs.com</a>, not from Westwind or Flower Hill Central directly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

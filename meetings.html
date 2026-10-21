@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Board Meetings | Westwind at Flower Hill</title>
+<meta name="description" content="Westwind Board of Directors meetings are held monthly by Google Meet video conference, with an annual meeting each March. Join details, call-in number, and meeting schedule.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .meet-card{
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow-sm); overflow:hidden;
+    display:grid; grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 820px){ .meet-card{ grid-template-columns: 1fr; } }
+  .meet-card-main{ padding: 34px 36px; }
+  .meet-card-side{
+    background: var(--pine-dark); color:#fff; padding: 34px 36px;
+    display:flex; flex-direction:column; justify-content:center; gap: 18px;
+  }
+  .meet-brand{
+    display:inline-flex; align-items:center; gap:10px;
+    font-weight:700; font-size:0.92rem; color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  .meet-brand svg{ width:22px; height:22px; flex:none; }
+  .meet-link-box{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    background: var(--sage); border-radius: 10px; padding: 14px 16px;
+    margin: 18px 0 22px;
+  }
+  .meet-link-box code{
+    font-family: inherit; font-weight:700; color: var(--pine-dark); font-size:1rem;
+    letter-spacing: 0.02em;
+  }
+  .btn-meet{
+    display:inline-flex; align-items:center; gap:10px;
+    background: #1A73E8; color:#fff; font-weight:700; font-size:0.98rem;
+    padding: 13px 24px; border-radius: 24px; text-decoration:none;
+    border:none; cursor:pointer; transition: background .15s ease, transform .15s ease;
+  }
+  .btn-meet:hover{ background:#1558B0; transform: translateY(-1px); }
+  .btn-meet svg{ width:20px; height:20px; }
+  .dial-row{
+    display:flex; gap:14px; align-items:flex-start;
+    padding-top: 18px; margin-top: 18px; border-top: 1px solid var(--line);
+  }
+  .dial-row .icon{
+    width:38px; height:38px; border-radius:10px; background:var(--sage); color:var(--pine);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .dial-row .icon svg{ width:19px; height:19px; }
+  .side-item{ display:flex; gap:14px; align-items:flex-start; }
+  .side-item .icon{
+    width:40px; height:40px; border-radius:10px; background: rgba(255,255,255,0.1); color: var(--gold);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .side-item .icon svg{ width:20px; height:20px; }
+  .side-item h4{ margin:0 0 4px; font-size:1rem; color:#fff; }
+  .side-item p{ margin:0; font-size:0.88rem; color: rgba(255,255,255,0.78); }
+
+  .schedule-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  @media (max-width: 820px){ .schedule-grid{ grid-template-columns: 1fr; } }
+  .schedule-card{
+    background: var(--white); border:1px solid var(--line); border-radius: var(--radius);
+    padding: 26px 28px; box-shadow: var(--shadow-sm);
+  }
+  .schedule-card .when{
+    display:inline-flex; align-items:center; gap:8px;
+    background: var(--sage); color: var(--pine); font-weight:700; font-size:0.82rem;
+    padding:6px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  .schedule-card .when svg{ width:15px; height:15px; }
+  .schedule-card h3{ margin:0 0 8px; color: var(--pine-dark); font-size:1.18rem; }
+  .schedule-card p{ margin:0; font-size:0.95rem; color: var(--ink); }
+
+  .device-steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; }
+  .device-steps li{ display:flex; gap:14px; align-items:flex-start; font-size:0.95rem; color:var(--ink); text-align:left; }
+  .device-steps .num{
+    width:26px; height:26px; border-radius:50%; background:var(--pine); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex:none;
+  }
+  .device-steps .step-text{ flex:1; text-align:left; }
+</style>
+</head>
+<body>
+<!--
+BOARD MEETINGS
+  Static page: the Google Meet link/dial-in info, the monthly meeting
+  schedule, the Annual Meeting + quorum-reconvene rule, and a callout
+  linking to minutes.html. If the Meet link or dial-in number ever
+  changes, search this file for "ody-iwgu-azb" and "754-217-7800" —
+  both appear in a couple of places (main card + the phone how-to
+  steps) and need updating together.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html" aria-current="page">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Open to every homeowner</span>
+      <h1>Board Meetings</h1>
+      <p>Westwind's Board of Directors meets monthly by video conference. Every homeowner is welcome to attend. Below are the steps to join, when we meet, and what to expect at the annual meeting.</p>
+    </div>
+</section>
+
+  <!-- Main Google Meet join card: link, dial-in number/PIN, quick device notes -->
+  <section aria-labelledby="join-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Monthly meetings</span>
+        <h2 id="join-h">Third Wednesday, 7:30 p.m.</h2>
+        <p>Board meetings are held every month by video conference using Google Meet. Homeowners are welcome to attend from a computer, tablet, or smartphone.</p>
+      </div>
+
+      <div class="meet-card">
+        <div class="meet-card-main">
+          <span class="meet-brand">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="14" height="12" rx="2" fill="#00832D"/><path d="M16 10.5 22 7v10l-6-3.5z" fill="#00AC47"/><rect x="2" y="6" width="14" height="6" fill="#2684FC"/><rect x="2" y="14" width="14" height="4" fill="#FFBA00"/></svg>
+            Google Meet video call
+          </span>
+
+          <div class="meet-link-box">
+            <code>meet.google.com/ody-iwgu-azb</code>
+          </div>
+
+          <a class="btn-meet" href="https://meet.google.com/ody-iwgu-azb" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="14" height="12" rx="2" fill="#fff"/><path d="M16 10.5 22 7v10l-6-3.5z" fill="#fff"/></svg>
+            Ask to join the meeting
+          </a>
+          <p style="font-size:0.84rem;color:var(--ink-soft);margin:12px 0 0;">This opens meet.google.com in a new tab. Click the blue "Ask to join" button when you arrive. The board will let you in.</p>
+
+          <div class="dial-row">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div>
+              <h4 style="margin:0 0 4px;font-size:1rem;color:var(--pine-dark);">Prefer to call in?</h4>
+              <p style="margin:0;font-size:0.95rem;color:var(--ink);">Dial <strong>754-217-7800</strong>, then enter PIN <strong>119 235 619</strong> followed by <strong>#</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="meet-card-side">
+          <div class="side-item">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <div>
+              <h4>Every third Wednesday</h4>
+              <p>7:30 p.m., monthly, all year</p>
+            </div>
+          </div>
+          <div class="side-item">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M17 2 12 7 7 2"/></svg></span>
+            <div>
+              <h4>Computer or tablet</h4>
+              <p>Just click the link. Nothing to install</p>
+            </div>
+          </div>
+          <div class="side-item">
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></span>
+            <div>
+              <h4>Smartphone</h4>
+              <p>Download the free Google Meet app first</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Numbered phone-join walkthrough (.device-steps list) -->
+  <section class="section-sage" aria-labelledby="device-h">
+    <div class="wrap feature">
+      <div>
+        <span class="eyebrow">Joining from a phone?</span>
+        <h2 id="device-h">Two Minutes, Start to Finish</h2>
+        <p>Google Meet works right in the browser on a computer or tablet. On a smartphone, iOS and Android both require the free Google Meet app the first time.</p>
+      </div>
+      <div>
+        <ol class="device-steps">
+          <li><span class="num">1</span><span class="step-text">Search "Google Meet" in the App Store or Google Play and install it.</span></li>
+          <li><span class="num">2</span><span class="step-text">At meeting time, tap the link above or type the code <strong>ody-iwgu-azb</strong> into the app.</span></li>
+          <li><span class="num">3</span><span class="step-text">Tap <strong>Ask to join</strong>. A board member will let you in.</span></li>
+          <li><span class="num">4</span><span class="step-text">No app, no problem. Call <strong>754-217-7800</strong> and enter PIN <strong>119235619 #</strong> instead.</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Annual Meeting + quorum-reconvene rule (Md. Code § 5-206) -->
+  <section aria-labelledby="annual-h">
+    <div class="wrap">
+      <div class="schedule-grid">
+        <div class="schedule-card">
+          <span class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> Third Wednesday of March</span>
+          <h3>Annual Meeting</h3>
+          <p>Held electronically each year, immediately before that month's regular Board meeting, using the same Google Meet details above: <a href="https://meet.google.com/ody-iwgu-azb" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">meet.google.com/ody-iwgu-azb</a>, or call 754-217-7800, PIN 119235619 #. As with monthly meetings, a smartphone will need the Google Meet app installed first.</p>
+        </div>
+        <div class="schedule-card">
+          <span class="when"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg> If quorum isn't met</span>
+          <h3>Reconvened Meeting: April</h3>
+          <p>If a quorum of homeowners isn't present at the March annual meeting, Westwind will invoke <strong>Md. Code, Corporations &amp; Associations &sect; 5-206</strong> and hold a reconvened meeting on the <strong>third Wednesday of April at 7:30 p.m.</strong>, using the same Google Meet video conference. At that meeting, the homeowners present constitute the quorum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link callout: points to minutes.html -->
+  <section aria-labelledby="minutes-link-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 8h16M8 4v16"/></svg></span>
+        <div class="body">
+          <h3 id="minutes-link-h">Couldn't Make a Meeting?</h3>
+          <p>Approved minutes from every Board meeting are posted on the <a href="minutes.html" style="color:var(--pine);font-weight:700;">Meeting Minutes</a> page, so you can see what was discussed and decided.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing "questions about a meeting?" callout -->
+  <section class="section-sage" aria-labelledby="reach-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <div class="body">
+          <h3 id="reach-h">Questions About a Meeting?</h3>
+          <p>Reach the board through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a>, or see who's who on the <a href="board.html" style="color:var(--pine);font-weight:700;">Board &amp; Contacts</a> page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

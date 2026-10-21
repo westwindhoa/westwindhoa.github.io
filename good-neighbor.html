@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Good Neighbor Guide | Westwind at Flower Hill</title>
+<meta name="description" content="Montgomery County's rules on fire pits, noise and quiet hours, and pet leash and licensing requirements, all in one place for Westwind residents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .quiet-hours-table{ display:flex; flex-direction:column; gap:12px; }
+  .qh-row{
+    display:grid; grid-template-columns: 1fr 1fr 1fr; gap:16px; align-items:center;
+    background: var(--surface); border-radius: var(--radius-sm); padding: 16px 20px;
+    box-shadow: var(--shadow-xs);
+  }
+  @media (max-width:640px){ .qh-row{ grid-template-columns:1fr; gap:4px; } }
+  .qh-row .label{ font-weight:700; color:var(--pine-dark); font-size:0.96rem; }
+  .qh-row .db{ font-weight:800; color:var(--pine); font-size:1.1rem; }
+  .qh-row .times{ font-size:0.9rem; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+<!--
+GOOD NEIGHBOR GUIDE
+  Practical county-rule reference for topics that come up often as
+  neighbor complaints but aren't in Westwind's own governing documents:
+  fire pits, noise/quiet hours, and pets. Everything here is sourced
+  directly from Montgomery County's own pages and code, not from
+  Westwind's Declaration or ACC Guidelines, since the board hasn't
+  confirmed Westwind has its own separate rule on any of these three
+  topics. If that ever changes, update the relevant section to cite
+  the actual Westwind document instead of (or alongside) county rules.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html" aria-current="page">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero with-photo" style="background-image:url('images/illustration-westwind-5.jpg');">
+    <div class="wrap">
+      <span class="eyebrow">Community &rsaquo; Good Neighbor Guide</span>
+      <h1>Good Neighbor Guide</h1>
+      <p>Fire pits, noise, and pets come up often as neighbor concerns. None of these have a separate Westwind rule beyond what Montgomery County already requires, so here's the county's own guidance on all three, in one place.</p>
+    </div>
+  </section>
+
+  <!-- Noise/quiet hours, sourced from Montgomery County noise ordinance -->
+  <section aria-labelledby="noise-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Quiet hours</span>
+        <h2 id="noise-h">Noise Control</h2>
+        <p>Westwind's governing documents don't set separate quiet hours. As far as the board's records show, noise is governed by Montgomery County's noise control law, not a Westwind-specific rule. If the board has an unwritten practice beyond this, that would need to be confirmed separately, the same as with tree removal.</p>
+      </div>
+
+      <div class="quiet-hours-table">
+        <div class="qh-row">
+          <span class="label">Daytime limit</span>
+          <span class="db">65 dBA</span>
+          <span class="times">Weekdays 7:00 am&ndash;9:00 pm<br>Weekends &amp; holidays 9:00 am&ndash;9:00 pm</span>
+        </div>
+        <div class="qh-row">
+          <span class="label">Nighttime limit</span>
+          <span class="db">55 dBA</span>
+          <span class="times">Weekdays 9:00 pm&ndash;7:00 am<br>Weekends &amp; holidays 9:00 pm&ndash;9:00 am</span>
+        </div>
+      </div>
+
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:18px;">Full details, including how to file a noise complaint, are on the county's <a href="https://www.montgomerycountymd.gov/department-environmental-protection/property-care/noise-control" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Noise Control</a> page.</p>
+    </div>
+  </section>
+
+  <!-- Fire pit rules, sourced from county permitting -->
+  <section class="section-sage" aria-labelledby="firepit-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Backyard fire pits</span>
+        <h2 id="firepit-h">Fire Pits, Fire Bowls &amp; Chimneys</h2>
+        <p>Straight from Montgomery County's Department of Permitting Services guidance for single-family homes.</p>
+      </div>
+
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Placement</span>
+          <h3>Keep It Away from the House</h3>
+          <p>At least 10 feet from your home is strongly recommended, with a clear 3-foot radius around the appliance. Mulch can burn, so keep it 3 feet clear of mulch too. Not recommended on a balcony or deck.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">What you burn</span>
+          <h3>Aged, Dried Wood Only</h3>
+          <p>No construction material, brush, or trash. No flammable or combustible liquids, ever.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">While it's burning</span>
+          <h3>Stay Ready, Stay Considerate</h3>
+          <p>Keep a garden hose connected and nearby. Watch the wind, and don't let smoke cross into a neighbor's yard. Skip it entirely on Code Orange or Code Red air quality days.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Afterward</span>
+          <h3>Ashes Stay Hot Longer Than You'd Think</h3>
+          <p>Wait 24 hours, then dampen, cool, and store ashes in a metal can used only for that. Never put hot ashes in a compost pile, paper bag, or anything combustible, even after a few days.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Who's responsible</span>
+          <h3>An Adult, Always</h3>
+          <p>At least one person 18 or older must be responsible for the fire, and you need permission from the landowner to have one at all.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">If it becomes a problem</span>
+          <h3>The Fire Department Can Put It Out</h3>
+          <p>If they're called and determine your fire is a hazard, they can and will extinguish it. Questions go to DPS Fire Code Compliance at 240-777-0311.</p>
+        </div>
+      </div>
+
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:18px;">Full guidance: <a href="https://www.montgomerycountymd.gov/department-permitting-services/about-us/building-safety-month-2026/dps-outdoor-fire-pit-single-family-guidance" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">DPS Outdoor Fire Pit Guidance</a>.</p>
+    </div>
+  </section>
+
+  <!-- Pet/leash rules, sourced from county animal services -->
+  <section aria-labelledby="pets-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Dogs, cats &amp; leash rules</span>
+        <h2 id="pets-h">Pets</h2>
+        <p>Two separate county requirements apply to every dog and cat in Westwind: a county pet license, and staying on a leash off your own property.</p>
+      </div>
+
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 9h.01M15 9h.01M8 14s1.5 2 4 2 4-2 4-2"/></svg></span>
+        <div class="body">
+          <h3>Pet Licensing Is Required, Not Optional</h3>
+          <p>Every dog and cat over 4 months old must have a current Montgomery County pet license and rabies tag, both visible on the collar. The rabies tag from your vet isn't the same thing as the county license. Apply online, by mail, or in person at the Animal Services &amp; Adoption Center in Derwood. Details: <a href="https://www.montgomerycountymd.gov/animal-services-adoption-center/pet-licensing" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Pet Licensing, Montgomery County Animal Services</a>.</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:18px;background:var(--surface);">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-6a2 2 0 0 1 2-2h1"/><path d="M9 21V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v12"/><path d="M17 21v-9a2 2 0 0 1 2-2h1"/></svg></span>
+        <div class="body">
+          <h3>Leash and Pick Up, Off Your Own Property</h3>
+          <p>Montgomery County's animal control code covers "at large" animals and related nuisance violations under <a href="https://codelibrary.amlegal.com/codes/montgomerycounty/latest/montgomeryco_md/0-0-0-119918" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Chapter 5, Animal Control</a>, including <a href="https://codelibrary.amlegal.com/codes/montgomerycounty/latest/montgomeryco_md/0-0-0-119948#JD_5-101" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Sec. 5-101 (Definitions, including "at large")</a> and <a href="https://codelibrary.amlegal.com/codes/montgomerycounty/latest/montgomeryco_md/0-0-0-120183" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Sec. 5-203 (Public nuisance and other violations)</a>. One specific violation defined there is "unwanted contact," meaning a pet's unwelcome or threatening contact with a person or another pet off the owner's property, such as biting, chasing, or blocking someone's path, which can carry a $500 fine.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link callout: full parking explanation moved to its own page, parking.html,
+       since (unlike noise/fire pits/pets) it's actually grounded in the Declaration,
+       not just county rules -- see parking.html's top-of-file comment for the real
+       source quotes. -->
+  <section aria-labelledby="parking-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div class="body">
+          <h3 id="parking-h">Street Parking Complaints</h3>
+          <p>This one comes up often enough that it has its own page: <a href="parking.html" style="color:var(--pine);font-weight:700;">Street Parking</a>, with the actual Declaration text on commercial vehicles, repairs, and unlicensed vehicles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing "how to report" callout -->
+  <section class="section-sage" aria-labelledby="report-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg></span>
+        <div class="body">
+          <h3 id="report-h">Have a Concern About One of These?</h3>
+          <p>Noise, fire pit safety, animal complaints, and public street parking all go through the county rather than the Westwind ACC, since these aren't Westwind-specific rules. For a neighbor issue that IS an ACC matter, like an unapproved fence, addition, or a commercial vehicle kept on someone's own lot, use the <a href="suspected-violations.html" style="color:var(--pine);font-weight:700;">Report a Violation</a> form instead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Approved Exterior Colors | Westwind at Flower Hill</title>
+<meta name="description" content="Approved siding, trim, and door colors for Westwind homes, and how the color approval process works for exterior modification requests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .swatch-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; }
+  .swatch{
+    width:84px; display:flex; flex-direction:column; align-items:center; gap:8px;
+  }
+  .swatch .chip{
+    width:64px; height:64px; border-radius:14px;
+    background: var(--surface); box-shadow: var(--shadow-raised);
+    border: 1px dashed var(--line);
+  }
+  .swatch .label{ font-size:0.74rem; font-weight:600; color:var(--ink-soft); text-align:center; }
+</style>
+</head>
+<body>
+<!--
+APPROVED EXTERIOR COLORS
+  Placeholder page: the board is still finalizing the actual approved
+  siding/trim/door color list (happening in conversations outside this
+  file). Structure is ready to receive that list the moment it's final
+  -- see the "swatch-row" blocks below in each category section, and
+  replace the empty .swatch placeholders with real color chips (name,
+  brand, code). Do NOT invent specific paint colors/brands here even
+  temporarily; leave the placeholder state until real approved colors
+  exist. Cross-linked from documents.html and fences.html so people
+  land here from the ACC form and the fence guidelines page too.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html" aria-current="page">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">ACC Standard</span>
+      <h1>Approved Exterior Colors</h1>
+      <p>Siding, trim, and door color is one of the most common topics the board discusses. This page will hold the approved palette once it's finalized, in one place, so residents can check before they buy paint or order siding.</p>
+    </div>
+  </section>
+
+  <!-- "Being finalized" notice -- remove once real colors are added below -->
+  <section aria-labelledby="status-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
+        <div class="body">
+          <h3 id="status-h">This Page Is Being Finalized</h3>
+          <p>The board is working through the approved color list. Once it's settled, the specific colors, brands, and swatches will be posted here. Until then, any exterior color change still needs to go through the standard <a href="documents.html#acc" style="color:var(--pine);font-weight:700;">Exterior Modification Form</a>, and the ACC will confirm whether a proposed color is approved as part of that review.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIDING swatches -- replace placeholder .swatch divs with real color chips once finalized -->
+  <section class="section-sage" aria-labelledby="siding-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Category</span>
+        <h2 id="siding-h">Siding</h2>
+        <p>Approved siding colors will be listed here as swatches, with the color name and code, once finalized.</p>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRIM swatches -->
+  <section aria-labelledby="trim-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Category</span>
+        <h2 id="trim-h">Trim</h2>
+        <p>Approved trim colors will be listed here once finalized.</p>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOOR swatches -->
+  <section class="section-sage" aria-labelledby="doors-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Category</span>
+        <h2 id="doors-h">Doors</h2>
+        <p>Approved door colors will be listed here once finalized. Front doors are sometimes handled with more flexibility than siding and trim; that distinction, if the board keeps it, will be explained here too.</p>
+      </div>
+      <div class="swatch-row">
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing CTA to the ACC form -->
+  <section aria-labelledby="request-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Changing your color now?</span>
+        <h2 id="request-h">Submit It Through the ACC</h2>
+        <p>Any exterior color change, siding, trim, or door, still needs ACC approval before work begins, the same as any other exterior modification.</p>
+      </div>
+      <a class="btn btn-gold" href="documents.html#acc">Go to the Exterior Modification Form &rarr;</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

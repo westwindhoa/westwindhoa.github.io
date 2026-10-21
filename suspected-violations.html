@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report a Suspected Violation | Westwind at Flower Hill</title>
+<meta name="description" content="How to report a suspected ACC violation at Westwind, including anonymous options.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+REPORT A VIOLATION
+  Leads with a real <form data-form="violation"> (submitted by forms.js to the
+  Google Apps Script web app, anonymous allowed, optional photos) with dropdown/checkbox fields kept deliberately
+  narrow (only categories actually documented elsewhere on this site —
+  ACC/exterior mod, fences/gates). Below the form: four non-form ways to
+  report, then a note distinguishing this page (report a NEIGHBOR to the
+  board) from Montgomery County's separate CCOC process (a dispute
+  AGAINST the association itself — a different thing entirely).
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html" aria-current="page">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero with-photo" style="background-image:url('images/illustration-westwind-3.jpg');">
+    <div class="wrap">
+      <span class="eyebrow">Community &rsaquo; Report a violation</span>
+      <h1>Report a Suspected Violation</h1>
+      <p>Notice something that doesn't look like it followed the ACC process, such as an unapproved fence, an addition, or a paint color? Submit it online below, or use one of the other methods further down the page.</p>
+    </div>
+</section>
+
+  <!-- MAIN REPORT FORM starts here. Submitted by forms.js. The field list is defined in
+       westwind-forms-apps-script.gs. Dropdown categories are kept deliberately
+       narrow to only what's documented elsewhere on this site. -->
+  <section aria-labelledby="form-h">
+    <div class="wrap contact-grid">
+      <div>
+        <h2 id="form-h" style="font-size:1.5rem;">Submit a Report Online</h2>
+        <p>The fastest way to reach the board. Stick to what you observed, such as address, dates, and what it looks like, rather than guesses about why. The board and ACC review every report against the actual guidelines before taking any action.</p>
+        <p style="font-size:0.86rem;color:var(--ink-soft);">You can leave the "your information" fields blank to report anonymously.</p>
+      </div>
+
+      <form class="form-card ww-form" id="violation-form" data-form="violation" data-subject="Suspected violation report" data-subject-field="property_address" aria-label="Suspected violation report">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+          <img src="images/logo-icon.png" alt="Westwind HOA logo" style="height:44px;width:auto;">
+          <div>
+            <strong style="display:block;color:var(--ink);font-size:1.02rem;">Westwind Homeowners Association</strong>
+            <span style="font-size:0.82rem;color:var(--ink-soft);">Suspected Violation Report</span>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="field">
+          <label for="v-address">Property address in question <span class="req">*</span></label>
+          <input type="text" id="v-address" name="property_address" required>
+        </div>
+
+        <div class="field">
+          <label for="v-category">What kind of issue is this? <span class="req">*</span></label>
+          <select id="v-category" name="category" required>
+            <option>Exterior modification without ACC approval (paint, addition, structure)</option>
+            <option>Fence or gate not matching the approved split-rail / A-frame style</option>
+            <option>Shed, deck, or other structure</option>
+            <option>Landscaping or yard maintenance</option>
+            <option>Noise complaint (see Montgomery County quiet hours)</option>
+            <option>Other (describe below)</option>
+          </select>
+        </div>
+
+        <fieldset class="field-group">
+          <legend>Is this ongoing or a one-time observation?</legend>
+          <div class="choice-row">
+            <label class="check"><input type="radio" name="status" value="Ongoing / still present" checked> Ongoing / still present</label>
+            <label class="check"><input type="radio" name="status" value="One-time"> One-time</label>
+            <label class="check"><input type="radio" name="status" value="Not sure"> Not sure</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="v-date">Approximate date first noticed</label>
+          <input type="date" id="v-date" name="date_noticed">
+        </div>
+
+        <div class="field">
+          <label for="v-description">What did you observe? <span class="req">*</span></label>
+          <textarea id="v-description" name="description" required placeholder="Describe what you saw, as factually as you can. No need to speculate about the reason."></textarea>
+        </div>
+
+        <div class="field">
+          <label for="v-files">Photos (optional)</label>
+          <input type="file" id="v-files" multiple accept=".jpg,.jpeg,.png,.gif,.webp,.heic,.pdf" aria-describedby="v-files-hint">
+          <ul class="file-list" aria-live="polite"></ul>
+          <p class="hint" id="v-files-hint">Up to 6 files. Photos help but are not required. Please photograph only the property in question, from the street or a common area.</p>
+        </div>
+
+        <div class="field">
+          <label class="check"><input type="checkbox" name="checked_guidelines" value="Yes"> <span>I checked the Fence &amp; Gate Guidelines or ACC Guidelines before reporting this</span></label>
+        </div>
+
+        <div class="field field-note">
+          <label for="v-name">Your name (optional)</label>
+          <input type="text" id="v-name" name="reporter_name" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="v-phone">Your phone (optional)</label>
+          <input type="tel" id="v-phone" name="reporter_phone" autocomplete="tel">
+        </div>
+        <div class="field">
+          <label for="v-email">Your email (optional)</label>
+          <input type="email" id="v-email" name="reporter_email" autocomplete="email">
+          <p class="hint">Add an email only if you want a confirmation receipt.</p>
+        </div>
+
+        <button class="btn btn-pine" type="submit" style="width:100%;justify-content:center;">Submit Report</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p style="font-size:0.78rem;color:var(--ink-soft);margin:6px 0 0;">Your report goes straight to the board. If you leave your name, phone, and email blank, the board will not receive any information about who sent it.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAIN REPORT FORM ends above this point.
+       Alternative non-form ways to report: email, mail, MC311 call, MC311 online. -->
+  <section class="section-sage" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Prefer not to use the form?</span>
+        <h2 id="how-h">Other Ways to Report</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card" style="cursor:default;">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span>
+          <h3>Email the Board</h3>
+          <p>Send details and, if possible, a photo to <a href="mailto:westwindhomeownersassoc@gmail.com" style="color:var(--pine);font-weight:700;">westwindhomeownersassoc@gmail.com</a>.</p>
+        </div>
+        <div class="card" style="cursor:default;">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21v-6a2 2 0 0 1 2-2h1"/><path d="M9 21V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v12"/><path d="M17 21v-9a2 2 0 0 1 2-2h1"/></svg></span>
+          <h3>Mail It In, Anonymously If You Prefer</h3>
+          <p>Westwind Homeowners Association, Inc.<br>8100 Mountain Laurel Lane<br>Gaithersburg, MD 20879</p>
+        </div>
+        <div class="card" style="cursor:default;">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <h3>Call Montgomery County MC311</h3>
+          <p>Dial <a href="tel:311" style="color:var(--pine);font-weight:700;">311</a> from within the county, or <a href="tel:2407770311" style="color:var(--pine);font-weight:700;">240-777-0311</a> from anywhere, Mon&ndash;Fri 7am&ndash;7pm.</p>
+        </div>
+        <div class="card" style="cursor:default;">
+          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 2-3 4"/><path d="M12 17h.01"/></svg></span>
+          <h3>File Online with the County</h3>
+          <p>Submit a request through <a href="https://www.montgomerycountymd.gov/mc311-contact-center" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Montgomery County's MC311 site</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- "What to include" tips, plus the note distinguishing this page (report a
+       NEIGHBOR to the board) from the county's separate CCOC process (a dispute
+       AGAINST the association itself). -->
+  <section aria-labelledby="what-h">
+    <div class="wrap">
+      <div class="callout" style="background:var(--surface);">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.6-7-11a7 7 0 0 1 14 0c0 6.4-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+        <div class="body">
+          <h3 id="what-h">What to Include</h3>
+          <p>The property address (or as close as you can get), what you observed, and roughly when. A photo helps but isn't required. You don't need to sign your name. The online form, mailed reports, and county-filed reports can all be anonymous.</p>
+        </div>
+      </div>
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:18px;">Not sure if something needs approval in the first place? Check the <a href="fences.html" style="color:var(--pine);font-weight:700;">Fence &amp; Gate Guidelines</a> or the full <a href="documents.html#acc" style="color:var(--pine);font-weight:700;">ACC Guidelines</a> before reporting.</p>
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:10px;">Noise, fire pits, and pets are governed by Montgomery County rather than Westwind's ACC. See the <a href="good-neighbor.html" style="color:var(--pine);font-weight:700;">Good Neighbor Guide</a> for those.</p>
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:10px;">This form is for reporting a neighboring property to the board. If your dispute is <em>with the association itself</em>, for example, the board not following its own procedures, that's handled separately by Montgomery County's <a href="https://www.montgomerycountymd.gov/department-housing-community-affairs/common-ownership-communities-coc/cochoa-complaint-form-instructions" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Commission on Common Ownership Communities (CCOC)</a>, a formal county process with its own complaint form and filing fee.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>

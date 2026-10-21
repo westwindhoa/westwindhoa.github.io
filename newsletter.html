@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Newsletter | Westwind at Flower Hill</title>
+<meta name="description" content="Every issue of the Westwind newsletter, archived and easy to browse.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+NEWSLETTER
+  Year-by-year archive, same .lib-table pattern as minutes.html. See the
+  HTML comment further down this file for the exact steps to add a new
+  issue.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html" aria-current="page">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Stay in the loop</span>
+      <h1>Newsletter</h1>
+      <p>Every issue of the Westwind newsletter, archived here so you can catch up any time: meeting recaps, upcoming events, and reminders, all in one place.</p>
+    </div>
+</section>
+
+  <section aria-labelledby="archive-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Sorted newest to oldest</span>
+        <h2 id="archive-h">All Issues</h2>
+      </div>
+
+      <!--
+        HOW TO ADD A NEW ISSUE
+        Copy one <a class="lib-row"> block from the current year's table and edit it:
+          href      = path to the newsletter PDF (e.g. "pdfs/2026-09-Westwind-Newsletter.pdf")
+          lib-title = the issue's headline or "Month Year" label
+          lib-tag   = leave as "Newsletter"
+          lib-date  = the mailing date
+        Paste new issues at the TOP of their year's table (newest first).
+        When a new year starts, duplicate a <div class="lib-table"> block, change the year heading,
+        and move last year's table down. Each January, add a fresh empty table for the new year here
+        at the top, and consider removing the oldest year at the bottom to keep the archive current.
+      -->
+
+      <!-- 2027 section starts here. Add new 2027 issues as a new .lib-row inside the .lib-table right below, newest at the top. -->
+      <div style="margin-bottom:36px;">
+        <h3 style="color:var(--pine-dark);font-size:1.15rem;margin:0 0 14px;">2027</h3>
+        <div class="lib-table reveal">
+          <div class="lib-row lib-head">
+            <span>Issue</span>
+            <span>Category</span>
+            <span>Date</span>
+            <span></span>
+          </div>
+        </div>
+        <p style="font-size:0.84rem;color:var(--ink-soft);margin-top:10px;">Issues will appear here as they're published throughout the year.</p>
+      </div>
+
+      <!-- 2026 section starts here. Add new 2026 issues as a new .lib-row inside the .lib-table right below, newest at the top. -->
+      <div style="margin-bottom:36px;">
+        <h3 style="color:var(--pine-dark);font-size:1.15rem;margin:0 0 14px;">2026</h3>
+        <div class="lib-table reveal">
+          <div class="lib-row lib-head">
+            <span>Issue</span>
+            <span>Category</span>
+            <span>Date</span>
+            <span></span>
+          </div>
+          <div class="lib-row">
+            <span class="lib-title">The Westwinder &mdash; Spring 2026</span>
+            <span class="lib-tag">Newsletter</span>
+            <span class="lib-date">Published Apr 29, 2026</span>
+            <span class="lib-dl">
+              <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Newsletter_Spring_2026.pdf" data-pdf-title="The Westwinder — Spring 2026">View</button>
+              &middot; <a href="pdfs/Westwind_Newsletter_Spring_2026.pdf" download>Download &darr;</a>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 section starts here. Add new 2025 issues as a new .lib-row inside the .lib-table right below, newest at the top. -->
+      <div style="margin-bottom:36px;">
+        <h3 style="color:var(--pine-dark);font-size:1.15rem;margin:0 0 14px;">2025</h3>
+        <div class="lib-table reveal">
+          <div class="lib-row lib-head">
+            <span>Issue</span>
+            <span>Category</span>
+            <span>Date</span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-size:0.86rem;color:var(--ink-soft);margin-top:20px;">Not currently receiving the newsletter by email? Let us know through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a> and we'll get you added.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

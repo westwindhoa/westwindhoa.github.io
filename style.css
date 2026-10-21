@@ -1,0 +1,1029 @@
+/* =============================================================================
+   WESTWIND HOA WEBSITE — SHARED STYLESHEET
+   =============================================================================
+   Loaded on every page via <link rel="stylesheet" href="style.css">. Nothing
+   here is page-specific — page-specific tweaks (a hero background image, a
+   one-off layout) live in a <style> block inside that page's own <head>
+   instead, and lean on the variables and classes defined here wherever
+   possible so the whole site stays visually consistent.
+
+   DESIGN SYSTEM AT A GLANCE
+   Palette   — deep "harbor slate" blue as primary, muted brass as accent,
+               on a soft blue-tinted neutral canvas (see the :root variables
+               directly below — change a color ONCE there and it updates
+               everywhere on the site that uses that variable).
+   Type      — Manrope for headings (var(--serif) — historically this site
+               used an actual serif font by that name, hence the variable
+               name; it now points to Manrope but the variable name stuck),
+               Inter for body text and UI (var(--sans)).
+   Shadows   — mostly soft single-direction drop shadows (the --shadow-*
+               variables) for general elevation, PLUS a restrained
+               "neumorphic" dual-shadow treatment (--shadow-raised /
+               --shadow-pressed) used only on tactile, clickable things
+               like buttons and icon badges — not smeared across every
+               card, so it stays readable instead of gimmicky.
+
+   TABLE OF CONTENTS (search for these exact headings to jump around)
+     :root tokens              — all colors, fonts, spacing, shadow variables
+     Base element resets       — html/body/headings/paragraphs/links
+     Skip link                 — accessibility: jump-to-content link
+     Header / nav              — the sticky top bar, logo, nav links
+     Hero                      — homepage's big top banner + buttons
+     Sections                  — generic section spacing + quick-link cards
+     Announcements             — homepage announcement list
+     Two-col feature           — image-beside-text layout (About section, etc.)
+     Photo banner              — full-bleed illustration banners w/ scrim
+     Page hero w/ photo        — interior-page hero variant with a background photo
+     Document list             — the .doc-row rows on documents.html
+     Board table                — board member card grid on board.html
+     Contact                    — contact page layout + form field styling
+     Dropdown nav                — Documents/Community/Report & Resources/Pool menus
+     Document library table     — the .lib-row rows on library/newsletter/minutes/budget
+     Motion system               — hover/scroll animations (reduced-motion aware)
+     Footer                      — site footer, 5-column link grid
+     PDF inline viewer (modal)   — the "View" popup for PDFs (paired with script.js)
+   ============================================================================= */
+
+:root{
+  /* ---- Brand colors ----
+     --pine / --pine-dark / --pine-tint: the primary "harbor slate" blue,
+     used for headings, buttons, the nav-current underline, and the dark
+     footer/header-bar backgrounds (--pine-dark).
+     --gold / --gold-dark: the brass accent — used sparingly, mostly for
+     "eyebrow" labels, links inside body text, and primary CTA buttons. */
+  --pine:        #2B4A63;   /* harbor slate — primary */
+  --pine-dark:   #16283A;   /* deep ink-navy */
+  --pine-tint:   #3E6486;   /* lighter slate, hover states */
+  --gold:        #B8834B;   /* muted brass — accent */
+  --gold-dark:   #93662E;
+
+  /* ---- Neutral canvas ----
+     --cream is the page background. --sage is a slightly deeper version
+     used for "alternate" sections (.section-sage) so long pages get some
+     visual rhythm without a hard color change. --surface is lighter than
+     both — it's what cards/buttons sit on top of so they read as "raised"
+     against the canvas. */
+  --cream:       #E7EEF5;   /* soft blue-tinted canvas */
+  --sage:        #D9E4EF;   /* deeper blue-gray, alternate surface tint */
+  --ink:         #1B2430;
+  --ink-soft:    #5B6472;
+  --white:       #FFFFFF;
+  --surface:     #F4F8FB;   /* raised card surface, cooler + lighter than canvas */
+  --line:        rgba(27,35,45,0.07);
+
+  --serif: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans:  "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --radius: 16px;
+  --radius-sm: 10px;
+
+
+  /* Soft, direction-consistent elevation (not full dual-tone neumorphism —
+     restrained so it stays legible and doesn't tip into pastiche) */
+  --shadow-xs: 0 1px 2px rgba(20,30,45,0.05), 0 1px 1px rgba(20,30,45,0.04);
+  --shadow-sm: 0 2px 6px rgba(20,30,45,0.05), 0 8px 20px -8px rgba(20,30,45,0.10);
+  --shadow: 0 10px 24px -8px rgba(20,30,45,0.16), 0 2px 8px rgba(20,30,45,0.06);
+  --shadow-lg: 0 20px 50px -14px rgba(20,30,45,0.28), 0 4px 14px rgba(20,30,45,0.08);
+
+  /* Neumorphic raised/pressed pair — used sparingly, on tactile controls only */
+  --neu-light: rgba(255,255,255,0.85);
+  --neu-dark: rgba(163,174,190,0.45);
+  --shadow-raised: 6px 6px 14px var(--neu-dark), -6px -6px 14px var(--neu-light);
+  --shadow-pressed: inset 3px 3px 7px var(--neu-dark), inset -3px -3px 7px var(--neu-light);
+
+  --maxw: 1120px;
+}
+
+@media (prefers-reduced-motion: no-preference){
+  html{ scroll-behavior: smooth; }
+}
+
+*, *::before, *::after{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+
+body{
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img{ max-width: 100%; display:block; }
+a{ color: inherit; }
+
+h1, h2, h3, h4{
+  font-family: var(--serif);
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+}
+
+h1{ font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 800; }
+h2{ font-size: clamp(1.6rem, 3.1vw, 2.15rem); font-weight: 700; }
+h3{ font-size: 1.2rem; font-weight: 700; }
+
+p{ margin: 0 0 1em; color: var(--ink-soft); }
+
+.eyebrow{
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  display: inline-block;
+  margin-bottom: 0.6em;
+}
+
+.wrap{
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Skip link for keyboard users */
+.skip-link{
+  position:absolute; left:-999px; top:auto;
+  background:var(--pine); color:#fff; padding:10px 16px;
+  border-radius: 0 0 8px 0; z-index: 200;
+}
+.skip-link:focus{ left:0; top:0; }
+
+/* ---------- Header / nav ----------
+   The <header class="site-header"> is `position: sticky` so it stays
+   pinned to the top while scrolling. It's semi-transparent with a blur
+   (backdrop-filter) rather than a solid color, which is why it still
+   looks good over any hero image behind it.
+
+   Structure per page (see any .html file's <head>...<header> block):
+     .brand          — logo image + "Westwind" wordmark, links home
+     .nav-toggle     — hamburger button, mobile only (see script.js §1)
+     .nav-links      — the actual link list; on mobile this is hidden
+                       until .nav-toggle adds an "open" class to it
+     .has-dropdown   — wraps each grouped menu (Documents / Community /
+                       Report & Resources / Pool); opens on hover on
+                       desktop (pure CSS) and on click on touch devices
+                       (see script.js §2)
+     .nav-cta        — the standalone gold-ish "Exterior Modification
+                       Form" pill button at the end of the nav
+   ---------- */
+.site-header{
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(238, 241, 244, 0.82);
+  backdrop-filter: blur(14px) saturate(1.4);
+  border-bottom: 1px solid rgba(27,35,45,0.05);
+}
+
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding: 14px 0;
+}
+
+.brand{
+  display:flex; align-items:center; gap:10px;
+  text-decoration:none;
+  font-family: var(--serif);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.brand-mark{
+  height: 38px; width: auto; flex: none; display:block;
+}
+
+.nav-links{
+  display:flex; align-items:center; gap: 20px;
+  list-style:none; margin:0; padding:0;
+}
+
+.nav-links a{
+  text-decoration:none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  padding: 6px 2px;
+  border-bottom: 2px solid transparent;
+  transition: color .15s ease, border-color .15s ease;
+}
+.nav-links a:hover,
+.nav-links a[aria-current="page"]{
+  color: var(--pine);
+  border-color: var(--gold);
+}
+
+.nav-cta{
+  background: var(--surface);
+  color: var(--pine) !important;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.84rem !important;
+  border: none !important;
+  box-shadow: var(--shadow-raised);
+  transition: box-shadow .18s ease, transform .18s ease, color .18s ease !important;
+}
+.nav-cta:hover{ color: var(--pine-tint) !important; transform: translateY(-1px); }
+.nav-cta:active{ box-shadow: var(--shadow-pressed); transform: translateY(0); }
+
+/* Contact button: sits next to .nav-cta in the header. Same pill shape and raised
+   shadow for a consistent "these are the two actions that matter" pairing, but a
+   visible pine border marks it as the secondary of the two (Exterior Modification
+   Form stays the visually louder, filled-looking one). */
+.nav-contact-btn{
+  background: var(--cream);
+  color: var(--pine) !important;
+  padding: 8px 17px;
+  border-radius: 999px;
+  font-size: 0.84rem !important;
+  border: 1.5px solid var(--pine) !important;
+  box-shadow: var(--shadow-raised);
+  transition: box-shadow .18s ease, transform .18s ease, background .18s ease !important;
+}
+.nav-contact-btn:hover{ background: var(--sage); transform: translateY(-1px); }
+.nav-contact-btn:active{ box-shadow: var(--shadow-pressed); transform: translateY(0); }
+
+.nav-toggle{
+  display:none;
+  background:none; border:none; cursor:pointer;
+  padding: 6px;
+}
+.nav-toggle svg{ width:26px; height:26px; color: var(--ink); }
+
+@media (max-width: 980px){
+  .nav-toggle{ display:block; }
+  .nav-links{
+    position: absolute; left:0; right:0; top: 100%;
+    flex-direction: column; align-items: flex-start;
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
+    padding: 6px 24px 22px;
+    gap: 4px;
+    display: none;
+  }
+  .nav-links.open{ display:flex; }
+  .nav-links a{ width:100%; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav-links a:last-child{ border-bottom: none; }
+  .nav-cta, .nav-contact-btn{ margin-top: 8px; text-align:center; }
+}
+
+/* Roofline divider removed from all pages */
+
+/* ---------- Hero ----------
+   The homepage-only large top banner (index.html). NOT the same thing as
+   .page-hero below, which is the shorter banner used on every interior
+   page — the homepage gets the bigger, two-column treatment because it's
+   the front door of the site.
+
+   Layout: two columns on desktop (headline+buttons on the left, the
+   .hero-panel stat grid on the right), stacking to one column on mobile
+   (see the @media block at the end of this section). The soft radial-
+   gradient background blobs are decorative only — see the "Motion
+   system" section further down for how they slowly drift on desktop.
+   ---------- */
+.hero{
+  background:
+    radial-gradient(ellipse 620px 420px at 82% -10%, rgba(184,131,75,0.16), transparent 60%),
+    radial-gradient(ellipse 560px 480px at 100% 60%, rgba(43,74,99,0.14), transparent 65%),
+    var(--cream);
+  color: var(--ink);
+  padding: 76px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero .wrap{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items:center;
+  padding-bottom: 64px;
+}
+.hero h1{ color: var(--ink); }
+.hero .eyebrow{ color: var(--gold-dark); }
+.hero p.lead{
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  max-width: 46ch;
+}
+.hero-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top: 26px; }
+
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.94rem;
+  text-decoration:none;
+  border: none;
+  cursor:pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn:hover{ transform: translateY(-1px); }
+.btn-gold{ background: var(--gold); color: #fff; box-shadow: var(--shadow-sm); }
+.btn-gold:hover{ background: var(--gold-dark); box-shadow: var(--shadow); }
+.btn-outline{
+  background: var(--surface); color: var(--ink);
+  box-shadow: var(--shadow-raised);
+}
+.btn-outline:hover{ color: var(--pine); }
+.btn-outline:active{ box-shadow: var(--shadow-pressed); }
+.btn-pine{ background: var(--pine); color:#fff; box-shadow: var(--shadow-sm); }
+.btn-pine:hover{ background: var(--pine-tint); box-shadow: var(--shadow); }
+
+.hero-emblem{
+  justify-self:center;
+  width: min(100%, 320px);
+}
+
+.hero-panel{
+  display:grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.hero-stat{
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow-raised);
+  display:flex; flex-direction:column; gap:4px;
+}
+.hero-stat .n{
+  font-family: var(--serif); font-weight:800; font-size: 1.6rem;
+  color: var(--pine); letter-spacing:-0.01em;
+}
+.hero-stat .l{
+  font-size: 0.78rem; font-weight:600; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+@media (max-width: 780px){
+  .hero .wrap{ grid-template-columns: 1fr; padding-bottom: 40px; }
+  .hero-emblem{ width: 220px; margin: 0 auto; }
+  .hero-panel{ max-width: 420px; margin: 8px auto 0; }
+}
+
+/* ---------- Sections ---------- */
+section{ padding: 68px 0; }
+.section-head{ max-width: 62ch; margin-bottom: 40px; }
+.section-sage{ background: var(--sage); }
+
+/* Quick links */
+.cards{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px){ .cards{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 560px){ .cards{ grid-template-columns: 1fr; } }
+
+.card{
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  text-decoration:none;
+  color: var(--ink);
+  display:flex; flex-direction:column; gap: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .22s cubic-bezier(.2,.8,.3,1), box-shadow .22s ease;
+}
+.card:hover{ transform: translateY(-4px); box-shadow: var(--shadow); }
+.card .icon{
+  width: 42px; height:42px;
+  border-radius: 12px;
+  background: var(--cream);
+  display:flex; align-items:center; justify-content:center;
+  color: var(--pine);
+  box-shadow: var(--shadow-raised);
+}
+.card .icon svg{ width:20px; height:20px; }
+.card h3{ margin: 0; font-size: 1.06rem; color: var(--ink); }
+.card p{ margin:0; font-size: 0.92rem; }
+.card .go{
+  margin-top: auto;
+  font-size: 0.82rem; font-weight:700; color: var(--gold-dark);
+  display:flex; align-items:center; gap: 6px;
+}
+
+/* Announcements */
+.announce-list{ display:flex; flex-direction:column; gap: 16px; }
+.announce{
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 20px 22px;
+  display:grid; grid-template-columns: 120px 1fr; gap: 20px; align-items:start;
+  box-shadow: var(--shadow-xs);
+}
+@media (max-width:640px){ .announce{ grid-template-columns: 1fr; gap:6px; } }
+.announce .date{
+  font-family: var(--serif);
+  font-weight:700;
+  color: var(--pine);
+  font-size: 0.95rem;
+}
+.announce h3{ margin: 0 0 4px; font-size: 1.05rem; }
+.announce p{ margin:0; font-size: 0.94rem; }
+
+/* Two-col feature */
+.feature{
+  display:grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items:center;
+}
+@media (max-width: 800px){ .feature{ grid-template-columns: 1fr; gap: 30px; } }
+.feature-art{
+  background: var(--surface);
+  border-radius: var(--radius);
+  aspect-ratio: 4/3;
+  display:flex; align-items:center; justify-content:center;
+  padding: 30px;
+  box-shadow: var(--shadow-sm);
+}
+.feature-art svg{ width: 100%; height:100%; }
+
+.pill-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+.pill-list li{
+  display:flex; gap:10px; align-items:flex-start;
+  font-size: 0.96rem; color: var(--ink);
+}
+.pill-list svg{ width:18px; height:18px; flex:none; margin-top:3px; color: var(--gold-dark); }
+
+/* Photo banner — full-bleed illustration strip with scrim */
+.photo-banner{
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.photo-banner::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(100deg, rgba(22,40,58,0.92) 0%, rgba(22,40,58,0.72) 32%, rgba(22,40,58,0.28) 62%, rgba(22,40,58,0.1) 100%);
+}
+.photo-banner .wrap{ position: relative; z-index: 1; }
+.photo-banner-content{ max-width: 46ch; }
+.photo-banner .eyebrow{ color: var(--gold); }
+.photo-banner h2{ color:#fff; margin: 6px 0 12px; }
+.photo-banner p{ color: rgba(255,255,255,0.86); margin: 0 0 22px; }
+@media (max-width: 700px){
+  .photo-banner{ min-height: 300px; }
+  .photo-banner::before{ background: linear-gradient(180deg, rgba(22,40,58,0.55) 0%, rgba(22,40,58,0.88) 65%); }
+}
+
+/* Resident tour slideshow embed — sits between the two photo banners on the
+   homepage. Just a styled frame around whatever Google Slides iframe is
+   pasted in; the iframe's own width/height attributes control its size. */
+.resident-tour{
+  background: var(--sage);
+}
+.resident-tour .wrap{
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.resident-tour .section-head{ max-width: 60ch; margin: 0 auto 26px; }
+.resident-tour-frame{
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 14px;
+  display:inline-block;
+  max-width: 100%;
+}
+.resident-tour-frame iframe{
+  display:block; max-width:100%; border-radius: 8px;
+}
+
+/* Page hero with photo backdrop (interior pages) */
+.page-hero.with-photo{
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.page-hero.with-photo::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(22,40,58,0.88) 0%, rgba(22,40,58,0.94) 100%);
+}
+.page-hero.with-photo .wrap, .page-hero.with-photo .roofline{ position: relative; z-index: 1; }
+
+
+.page-hero{
+  background:
+    radial-gradient(ellipse 520px 320px at 88% 0%, rgba(184,131,75,0.14), transparent 60%),
+    var(--cream);
+  color: var(--ink);
+  padding: 58px 0 46px;
+}
+.page-hero .wrap{ padding-bottom: 0; }
+.page-hero h1{ color: var(--ink); margin-bottom: 10px; }
+.page-hero p{ color: var(--ink-soft); max-width: 60ch; margin:0; }
+.page-hero.with-photo h1{ color:#fff; }
+.page-hero.with-photo p{ color: rgba(255,255,255,0.82); }
+
+/* Document list */
+.doc-groups{ display:flex; flex-direction:column; gap: 44px; }
+.doc-group h2{ margin-bottom: 6px; }
+.doc-group > p{ margin-bottom: 22px; }
+.doc-list{ display:flex; flex-direction:column; gap:12px; }
+.doc-row{
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  display:flex; align-items:center; gap: 16px;
+  text-decoration:none; color: var(--ink);
+  box-shadow: var(--shadow-xs);
+  transition: box-shadow .18s ease, transform .18s ease;
+}
+.doc-row:hover{ box-shadow: var(--shadow-sm); transform: translateX(3px); }
+.doc-row .file-icon{
+  width:38px; height:38px; flex:none; border-radius:10px;
+  background: var(--cream); color: var(--pine);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: var(--shadow-raised);
+}
+.doc-row .file-icon svg{ width:20px; height:20px; }
+.doc-row .meta{ flex:1; min-width:0; }
+.doc-row .meta strong{ display:block; font-size:0.98rem; color: var(--ink); }
+.doc-row .meta span{ font-size: 0.82rem; color: var(--ink-soft); }
+.doc-row .dl{
+  font-size: 0.82rem; font-weight:700; color: var(--gold-dark);
+  white-space: nowrap;
+}
+
+.callout{
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  display:flex; gap:20px; align-items:flex-start;
+  flex-wrap:wrap;
+  box-shadow: var(--shadow-sm);
+}
+.callout .icon{
+  width:44px; height:44px; flex:none; border-radius:12px;
+  background: var(--pine); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: var(--shadow-sm);
+}
+.callout .icon svg{ width:24px; height:24px; }
+.callout .body{ flex:1; min-width: 240px; }
+.callout h3{ margin: 0 0 6px; }
+.callout p{ margin:0; }
+
+/* Board table */
+.board-grid{
+  display:grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+@media (max-width: 900px){ .board-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 620px){ .board-grid{ grid-template-columns: 1fr; } }
+.board-card{
+  background:var(--surface); border:none; border-radius: var(--radius);
+  padding: 24px 22px;
+  box-shadow: var(--shadow-xs);
+}
+.board-card .role{
+  font-size: 0.72rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  color: var(--gold-dark); margin-bottom: 6px; display:block;
+}
+.board-card h3{ margin: 0 0 4px; }
+.board-card p{ margin:0; font-size: 0.9rem; }
+.board-card a{ font-size: 0.9rem; color: var(--pine); font-weight:600; text-decoration:none; }
+.board-card a:hover{ text-decoration:underline; }
+
+/* Contact */
+.contact-grid{
+  display:grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items:start;
+}
+@media (max-width: 800px){ .contact-grid{ grid-template-columns:1fr; } }
+.contact-item{ display:flex; gap:14px; margin-bottom: 22px; }
+.contact-item .icon{
+  width:40px; height:40px; flex:none; border-radius:12px;
+  background: var(--cream); color: var(--pine);
+  display:flex; align-items:center; justify-content:center;
+  box-shadow: var(--shadow-raised);
+}
+.contact-item .icon svg{ width:20px; height:20px; }
+.contact-item h3{ margin:0 0 3px; font-size:1rem; }
+.contact-item p{ margin:0; font-size:0.94rem; }
+
+.form-card{
+  background: var(--surface); border:none; border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+.field{ margin-bottom: 16px; }
+.field label{ display:block; font-size:0.86rem; font-weight:700; margin-bottom:6px; color: var(--ink); }
+/* Text-style fields only — the :not() exclusions matter here. Without
+   them, this rule also catches radio buttons and checkboxes (which
+   appear inside .field blocks too, e.g. the "ongoing / one-time /
+   not sure" question on suspected-violations.html) and stretches them
+   into full-width pill-shaped bars instead of leaving them as small
+   circles/boxes. Ask: does a NEW input type ever look wrong inside a
+   .field? Check here first. */
+.field input:not([type="radio"]):not([type="checkbox"]),
+.field textarea,
+.field select{
+  width:100%; padding: 11px 13px; border-radius: 10px;
+  border: none; font-family: var(--sans); font-size: 0.95rem;
+  background: var(--cream);
+  box-shadow: var(--shadow-pressed);
+}
+.field input:not([type="radio"]):not([type="checkbox"]):focus,
+.field textarea:focus,
+.field select:focus{
+  outline: 2px solid var(--gold); outline-offset: 1px;
+}
+.field input[type="radio"],
+.field input[type="checkbox"]{
+  width: auto; accent-color: var(--pine);
+}
+.field textarea{ resize: vertical; min-height: 100px; }
+
+/* ---------- Dropdown nav ----------
+   The Documents / Community / Report & Resources / Pool menus.
+
+   IMPORTANT: this is intentionally NOT a pure-CSS :hover menu. An earlier
+   version used .has-dropdown:hover, which caused a real bug — on trackpads
+   and touchscreens, "hover" can get stuck on after a tap/click since
+   there's no real mouse to "leave" with, so the menu would stay open
+   until the person clicked elsewhere on the page. Visibility here is
+   controlled ONLY by the "open" class, which script.js adds/removes via:
+     - click on the .dropdown-toggle button (works everywhere, incl. touch)
+     - mouseenter/mouseleave on the whole .has-dropdown (desktop mouse only,
+       skipped on touch devices — see script.js §2 for exactly how)
+   If a dropdown ever seems to "stick open" again, look at script.js §2
+   first, not this file — the CSS here just reacts to the "open" class.
+
+   aria-current="page" on the active page's link (and the "open" class
+   on its parent .has-dropdown) is set directly in each page's HTML, not
+   computed by JS — when adding a new page to one of these menus, copy
+   the pattern from a sibling page and make sure exactly one link across
+   the WHOLE nav has aria-current="page" pointing at that page itself.
+   ---------- */
+.nav-links li.has-dropdown{ position:relative; }
+.dropdown-toggle{
+  background:none; border:none; cursor:pointer;
+  display:flex; align-items:center; gap:5px;
+  font: inherit; font-weight:600; color: var(--ink);
+  padding: 6px 2px; font-size:0.92rem;
+}
+.dropdown-toggle svg{ width:13px; height:13px; transition: transform .2s ease; }
+.has-dropdown.open .dropdown-toggle svg{ transform: rotate(180deg); }
+.dropdown-toggle:hover{ color: var(--pine); }
+
+.submenu{
+  list-style:none; margin:0; padding:8px;
+  position:absolute; top:calc(100% + 10px); left:0;
+  background: var(--surface); border:none; border-radius: 14px;
+  box-shadow: var(--shadow-lg); min-width: 230px;
+  opacity:0; visibility:hidden; transform: translateY(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s;
+  z-index: 60;
+}
+/* Visibility is controlled ONLY by the "open" class, which script.js adds
+   and removes (via click, and via mouseenter/mouseleave on desktop) — see
+   the DROPDOWN MENUS comment in script.js §2 for why this is deliberately
+   NOT also driven by a CSS :hover rule. */
+.has-dropdown.open .submenu{
+  opacity:1; visibility:visible; transform: translateY(0);
+}
+.submenu li{ list-style:none; }
+.submenu a{
+  display:block; padding: 9px 12px; border-radius:8px;
+  font-size:0.88rem; font-weight:600; white-space:nowrap;
+  text-decoration:none; color: var(--ink);
+}
+.submenu a::after{ display:none; }
+.submenu a:hover{ background: var(--sage); color: var(--pine); }
+.submenu a[aria-current="page"]{ color: var(--pine); background: var(--sage); }
+
+@media (max-width: 980px){
+  .nav-links li.has-dropdown{ width:100%; }
+  .dropdown-toggle{ width:100%; justify-content:space-between; padding:12px 0; }
+  .submenu{
+    position:static; opacity:1; visibility:visible; transform:none;
+    display:none; box-shadow:none; border:none; background:var(--sage);
+    margin: 2px 0 6px; min-width:0;
+  }
+  .has-dropdown.open .submenu{ display:block; }
+}
+
+/* Two-up example gate photos */
+.two-up-examples{
+  display:grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+@media (max-width: 700px){
+  .two-up-examples{ grid-template-columns: 1fr; }
+}
+
+/* ---------- Document library table ----------
+   The .lib-table / .lib-row pattern used on FOUR pages that all share
+   the same "archive of dated items" shape: library.html (governing
+   docs), newsletter.html, minutes.html, and budget.html (all three
+   organized into per-year tables — see the HTML comment in each of
+   those files for exactly how to add a new entry).
+
+   Each .lib-row is a 4-column grid (title / category tag / date /
+   actions) that collapses to a single stacked column on phones — see
+   the @media block at the bottom of this section. The "actions" column
+   normally holds a "View" button (opens the PDF inline — see the PDF
+   INLINE VIEWER section far below and script.js §4) followed by a
+   plain "Download" link.
+   ---------- */
+.lib-table{
+  border: none;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+.lib-row{
+  display:grid;
+  grid-template-columns: 2.2fr 1fr 1.3fr 0.9fr;
+  gap: 14px;
+  align-items:center;
+  padding: 16px 20px;
+  text-decoration:none;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  transition: background .15s ease;
+}
+.lib-row:last-child{ border-bottom:none; }
+.lib-row:not(.lib-head):hover{ background: var(--cream); }
+.lib-head{
+  background: var(--sage);
+  font-size: 0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
+  color: var(--ink-soft);
+}
+.lib-title{ font-weight:700; color:var(--ink); font-size:0.96rem; }
+.lib-tag{
+  display:inline-block; width:fit-content;
+  font-size:0.72rem; font-weight:700; letter-spacing:.04em;
+  padding: 3px 10px; border-radius:999px;
+  background: var(--sage); color: var(--pine);
+}
+.lib-date{ font-size:0.88rem; color:var(--ink-soft); }
+.lib-dl{ font-size:0.82rem; font-weight:700; color:var(--gold-dark); text-align:right; }
+
+@media (max-width: 720px){
+  .lib-row{ grid-template-columns: 1fr; gap:6px; padding:16px 18px; }
+  .lib-head{ display:none; }
+  .lib-tag{ order:-1; }
+  .lib-dl{ text-align:left; margin-top:4px; }
+}
+
+/* ---------- Motion system ----------
+   All animation/hover-motion lives inside this single
+   @media (prefers-reduced-motion: no-preference) block, which means:
+   anyone with "reduce motion" turned on at the OS level gets a
+   completely static site automatically — none of this runs for them.
+   That's also why base styles earlier in this file never include
+   transitions themselves; the transitions are added ONLY in here.
+   ---------- */
+@media (prefers-reduced-motion: no-preference){
+  .reveal{
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1);
+  }
+  .reveal.in-view{ opacity: 1; transform: translateY(0); }
+
+  .reveal-stagger > *{
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .6s cubic-bezier(.2,.7,.3,1), transform .6s cubic-bezier(.2,.7,.3,1);
+  }
+  .reveal-stagger.in-view > *{ opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1){ transition-delay: .02s; }
+  .reveal-stagger.in-view > *:nth-child(2){ transition-delay: .09s; }
+  .reveal-stagger.in-view > *:nth-child(3){ transition-delay: .16s; }
+  .reveal-stagger.in-view > *:nth-child(4){ transition-delay: .23s; }
+  .reveal-stagger.in-view > *:nth-child(5){ transition-delay: .30s; }
+  .reveal-stagger.in-view > *:nth-child(6){ transition-delay: .37s; }
+
+  .hero{
+    background:
+      radial-gradient(ellipse 620px 420px at 82% -10%, rgba(184,131,75,0.16), transparent 60%),
+      radial-gradient(ellipse 560px 480px at 100% 60%, rgba(43,74,99,0.14), transparent 65%),
+      var(--cream);
+    background-size: 160% 160%, 160% 160%, 100% 100%;
+    animation: heroDrift 18s ease-in-out infinite;
+  }
+  @keyframes heroDrift{
+    0%{ background-position: 0% 0%, 100% 100%, 0 0; }
+    50%{ background-position: 20% 15%, 80% 85%, 0 0; }
+    100%{ background-position: 0% 0%, 100% 100%, 0 0; }
+  }
+
+  .hero-emblem{ animation: floatY 6s ease-in-out infinite; }
+  @keyframes floatY{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+  }
+
+  .card{ transition: transform .32s cubic-bezier(.2,.8,.3,1.3), box-shadow .32s ease; }
+  .card:hover{ transform: translateY(-6px) scale(1.015); }
+
+  .btn{ transition: transform .25s cubic-bezier(.3,1.5,.4,1), background .2s ease, box-shadow .25s ease; }
+  .btn:hover{ transform: translateY(-2px) scale(1.02); }
+  .btn:active{ transform: translateY(0) scale(.98); }
+
+  .nav-links a{ position: relative; }
+  .nav-links a:not(.nav-cta):not(.nav-contact-btn)::after{
+    content:""; position:absolute; left:0; right:100%; bottom:-2px; height:2px;
+    background: var(--gold); transition: right .25s cubic-bezier(.3,.8,.3,1);
+  }
+  .nav-links a:not(.nav-cta):not(.nav-contact-btn):hover::after{ right:0; }
+
+  .doc-row, .lib-row, .board-card, .announce{
+    transition: transform .28s cubic-bezier(.2,.8,.3,1.2), box-shadow .28s ease, background .2s ease;
+  }
+  .doc-row:hover, .lib-row:not(.lib-head):hover{ transform: translateX(4px); }
+  .board-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+}
+
+/* Footer */
+/* =========================================================================
+   FOOTER
+   -------------------------------------------------------------------------
+   Five columns on wide screens: brand blurb, then four link groups that
+   mirror the site's four nav groups (Site / Documents / Community /
+   Resources & Pool) — see the "PAGES" registry comment at the top of any
+   page's <footer> markup for which page belongs in which group. Collapses
+   to 2 columns on tablets and 1 on phones.
+   ========================================================================= */
+footer{
+  background: var(--pine-dark);
+  color: rgba(255,255,255,0.82);
+  padding: 50px 0 30px;
+}
+.footer-grid{
+  display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; gap: 28px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+@media (max-width: 1000px){ .footer-grid{ grid-template-columns: 1fr 1fr 1fr; } }
+@media (max-width: 640px){ .footer-grid{ grid-template-columns: 1fr 1fr; gap: 26px; } }
+@media (max-width: 420px){ .footer-grid{ grid-template-columns: 1fr; } }
+.footer-brand{ display:flex; align-items:center; gap:10px; font-family: var(--serif); font-weight:800; font-size:1.15rem; color:#fff; margin-bottom: 10px; }
+.footer-brand svg{ width:28px; height:28px; }
+footer h4{
+  font-family: var(--sans); text-transform:uppercase; letter-spacing:0.1em;
+  font-size:0.74rem; color: rgba(255,255,255,0.55); margin: 0 0 14px;
+}
+footer ul{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+footer a{ text-decoration:none; color: rgba(255,255,255,0.85); font-size:0.92rem; }
+footer a:hover{ color: var(--gold); }
+.footer-bottom{
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;
+  padding-top: 20px; font-size: 0.82rem; color: rgba(255,255,255,0.5);
+}
+
+.visually-hidden{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* =========================================================================
+   PDF INLINE VIEWER (modal)
+   -------------------------------------------------------------------------
+   Paired with the JS in script.js, section 4 ("PDF INLINE VIEWER"). Any
+   element with a data-pdf-src attribute opens this modal instead of
+   navigating to the PDF directly. The modal itself is injected into the
+   DOM by script.js the first time it's needed — this CSS just defines
+   what it looks like once it exists.
+
+   Structure (built by JS):
+     .pdf-modal                  <- fixed full-screen wrapper, hidden by default
+       .pdf-modal-backdrop       <- dark clickable overlay behind the card
+       .pdf-modal-card           <- the white card holding the title bar + PDF
+         .pdf-modal-bar          <- title + Download link + × close button
+         .pdf-modal-frame        <- the <iframe> that actually renders the PDF
+
+   .pdf-modal has no "open" class by default (display:none), so pages that
+   never trigger the viewer never show anything — the JS adds "open" only
+   when a view button is clicked.
+   ========================================================================= */
+.pdf-modal{
+  display:none;
+  position: fixed; inset: 0; z-index: 300;
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+.pdf-modal.open{ display:flex; }
+/* Locks background scrolling while the modal is open (added/removed by JS) */
+body.pdf-modal-locked{ overflow: hidden; }
+
+.pdf-modal-backdrop{
+  position:absolute; inset:0;
+  background: rgba(15,22,30,0.72);
+}
+.pdf-modal-card{
+  position:relative; z-index:1;
+  background: var(--white);
+  width: min(100%, 900px);
+  height: min(100%, 900px);
+  border-radius: 16px;
+  overflow: hidden;
+  display:flex; flex-direction:column;
+  box-shadow: var(--shadow-lg);
+}
+.pdf-modal-bar{
+  display:flex; align-items:center; justify-content:space-between;
+  gap: 14px; padding: 14px 18px;
+  background: var(--pine-dark); color: #fff; flex: none;
+}
+.pdf-modal-title{ font-weight:700; font-size:0.98rem; }
+.pdf-modal-actions{ display:flex; align-items:center; gap: 14px; }
+.pdf-modal-download{
+  color: var(--gold); font-weight:700; font-size:0.86rem; text-decoration:none;
+}
+.pdf-modal-download:hover{ text-decoration:underline; }
+.pdf-modal-close{
+  background: rgba(255,255,255,0.12); border:none; border-radius:8px;
+  width:32px; height:32px; display:flex; align-items:center; justify-content:center;
+  color:#fff; cursor:pointer;
+}
+.pdf-modal-close:hover{ background: rgba(255,255,255,0.22); }
+.pdf-modal-close svg{ width:18px; height:18px; }
+.pdf-modal-frame{
+  flex: 1; width: 100%; border: none; background: var(--cream);
+}
+
+/* Button style for the "View" trigger itself (used alongside the existing
+   .doc-row / .lib-row "Download" links — see documents.html / library.html).
+   Underlined by default (not just on hover) so it reads as a clickable
+   link at a glance, matching the neighboring "Download" link instead of
+   just looking like bold blue text. */
+.btn-view-pdf{
+  display:inline-flex; align-items:center; gap:6px;
+  background: none; border: none; cursor:pointer;
+  font-family: var(--sans); font-weight:700; font-size: 0.82rem;
+  color: var(--pine); padding:0;
+  text-decoration: underline; text-underline-offset: 2px;
+}
+.btn-view-pdf:hover{ color: var(--pine-tint); }
+.btn-view-pdf svg{ width:15px; height:15px; }
+
+/* =============================================================================
+   ONLINE FORMS (forms.js + westwind-forms-apps-script.gs)
+   Extra pieces for the four site forms: honeypot spam trap, two-column field
+   rows, file upload list, live status message, and the thank-you panel.
+   The inputs themselves reuse the .form-card / .field styles above.
+   ============================================================================= */
+.ww-form .hp{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.field-row{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+@media (max-width: 560px){ .field-row{ grid-template-columns: 1fr; gap:0; } }
+.field .req{ color: var(--gold-dark); }
+.field .hint{ font-size:0.8rem; color: var(--ink-soft); margin:8px 0 0; }
+.field-group{ border:0; padding:0; margin:0 0 16px; min-width:0; }
+.field-group legend{
+  display:block; font-size:0.86rem; font-weight:700; margin-bottom:8px; color: var(--ink); padding:0;
+}
+.choice-row{ display:flex; gap:8px 18px; flex-wrap:wrap; }
+.field .check, .check{
+  display:flex; align-items:flex-start; gap:10px;
+  font-size:0.92rem; font-weight:500; color: var(--ink); margin:0; cursor:pointer;
+}
+.field .check input, .check input{ width:18px; height:18px; flex:none; margin-top:2px; padding:0; accent-color: var(--pine); }
+.field-note{ border-top:1px solid rgba(27,35,45,0.12); padding-top:16px; margin-top:6px; }
+.field input[type="date"]{ min-height:44px; }
+.field input[type="file"]{ padding:10px; cursor:pointer; }
+.file-list{ list-style:none; margin:10px 0 0; padding:0; }
+.file-list li{
+  display:flex; align-items:center; gap:10px; padding:8px 12px; margin-bottom:6px;
+  background: var(--sage); border-radius:10px; font-size:0.88rem;
+}
+.file-list .file-name{ flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color: var(--ink); }
+.file-list .file-size{ color: var(--ink-soft); font-size:0.8rem; flex:none; }
+.file-remove{
+  background:none; border:0; color: var(--pine); font-weight:700; font-size:0.82rem;
+  cursor:pointer; text-decoration:underline; padding:4px;
+}
+.form-status{ min-height:1.4em; margin:14px 0 0; font-size:0.9rem; color: var(--ink-soft); }
+.form-status.is-error{ color:#9B2C2C; font-weight:600; }
+.form-status.is-error a{ color: var(--pine); font-weight:700; }
+.form-status.is-info{ color: var(--pine); }
+.ww-form button[disabled]{ opacity:0.65; cursor:wait; transform:none; }
+.form-success{
+  background: var(--surface); border-left:5px solid var(--pine);
+  border-radius: var(--radius); padding:28px; box-shadow: var(--shadow);
+}
+.form-success:focus{ outline:2px solid var(--gold); outline-offset:3px; }
+.form-success h3{ margin:0 0 10px; }
+.form-success .ref-code{
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--sage);
+  padding:2px 8px; border-radius:6px; color: var(--pine-dark);
+}
+.form-success, .ww-form{ scroll-margin-top: 110px; }
+
+/* Rental form: conditional sections */
+.form-section-h{ font-size:1.05rem; margin:4px 0 14px; color:var(--ink); }
+.form-section{ border:1px solid var(--line, #d9e1ea); border-radius:14px; padding:16px 16px 4px; margin:0 0 18px; background:rgba(255,255,255,0.6); min-inline-size:0; }
+.form-section[hidden]{ display:none; }
+.form-section legend{ font-weight:700; padding:0 8px; color:var(--ink); }
