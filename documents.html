@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Documents &amp; Forms | Westwind at Flower Hill</title>
+<meta name="description" content="Westwind governing documents, meeting minutes, and the exterior modification (ACC) request form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+DOCUMENTS & FORMS
+  Landing page for the ACC process. Key parts: "Three jobs, one
+  committee" explainer -> the ACC Exterior Modification form itself
+  (id="acc" — this is what documents.html#acc links to sitewide) built
+  as a real <form data-form="acc"> that posts to the Google Apps Script web
+  app through forms.js, with photo/PDF uploads -> a secondary "prefer a PDF" section with View/Download
+  buttons for the fillable PDF -> rental registration + trees callouts ->
+  a short list pointing to library.html for the full governing-document
+  set.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html" aria-current="page">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Library</span>
+      <h1>Documents &amp; Forms</h1>
+      <p>Governing documents, board records, and the forms you'll need as a Westwind homeowner. Everything here is a PDF you can view, download, or fill out on your phone or tablet.</p>
+    </div>
+</section>
+
+  <!-- "Three jobs, one committee" explainer: resale inspections, property improvement review, notices -->
+  <section aria-labelledby="acc-role-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What the ACC actually does</span>
+        <h2 id="acc-role-h">Three Jobs, One Committee</h2>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Before you sell</span>
+          <h3>Resale Inspections</h3>
+          <p>Reviews the exterior of homes going up for sale to confirm they're in compliance before closing.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Before you build</span>
+          <h3>Property Improvement Review</h3>
+          <p>Reviews every exterior modification request to make sure it fits community standards and won't clash with neighboring homes.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">After the fact</span>
+          <h3>Notices &amp; Warnings</h3>
+          <p>Issues a notice when something doesn't match the approved guidelines, with a chance to fix it before further action.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN ACC FORM starts here. This is what documents.html#acc links to sitewide
+       (the "Exterior Modification Form" button in the nav points here).
+       Submitted by forms.js to the Google Apps Script web app (emails the ACC with the
+       files attached and logs a row in the ACC Requests sheet). Field names must match
+       the acc entry in FORM_DEFS inside westwind-forms-apps-script.gs. -->
+  <section id="acc" aria-labelledby="acc-h">
+    <div class="wrap contact-grid">
+      <div>
+        <span class="eyebrow">Planning an exterior change?</span>
+        <h2 id="acc-h" style="font-size:1.5rem;">Exterior Modification Request</h2>
+        <p>Any exterior modification, including paint color, fencing, additions, sheds, and landscaping beyond routine maintenance, requires ACC approval before work begins. Fill out the form and submit it online, or use the fillable PDF if you'd rather.</p>
+        <p style="font-size:0.86rem;color:var(--ink-soft);">Attach photos, a sketch, a material sample, or your contractor's estimate right on the form. The ACC receives everything by email, and you get a confirmation with a reference number.</p>
+      </div>
+
+      <form class="form-card ww-form" id="acc-form" data-form="acc" data-subject="Exterior Modification Request" data-subject-field="property_address" aria-label="Exterior modification request">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+          <img src="images/logo-icon.png" alt="Westwind HOA logo" style="height:44px;width:auto;">
+          <div>
+            <strong style="display:block;color:var(--ink);font-size:1.02rem;">Westwind Homeowners Association</strong>
+            <span style="font-size:0.82rem;color:var(--ink-soft);">Exterior Modification Request</span>
+          </div>
+        </div>
+        <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="hp" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="field">
+          <label for="acc-address">Property address <span class="req">*</span></label>
+          <input type="text" id="acc-address" name="property_address" autocomplete="street-address" required>
+        </div>
+        <div class="field">
+          <label for="acc-name">Homeowner name <span class="req">*</span></label>
+          <input type="text" id="acc-name" name="owner_name" autocomplete="name" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="acc-phone">Phone</label>
+            <input type="tel" id="acc-phone" name="owner_phone" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="acc-email">Email <span class="req">*</span></label>
+            <input type="email" id="acc-email" name="owner_email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="acc-type">Type of modification <span class="req">*</span></label>
+          <input type="text" id="acc-type" name="mod_type" placeholder="e.g. Fence, paint, shed, deck, addition, solar" required>
+        </div>
+        <div class="field">
+          <label for="acc-description">Description: work, dimensions, and location on the lot <span class="req">*</span></label>
+          <textarea id="acc-description" name="mod_description" required></textarea>
+        </div>
+        <div class="field">
+          <label for="acc-materials">Materials, colors &amp; specifications</label>
+          <textarea id="acc-materials" name="mod_materials"></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="acc-contractor">Contractor (if any)</label>
+            <input type="text" id="acc-contractor" name="contractor">
+          </div>
+          <div class="field">
+            <label for="acc-dates">Estimated start / completion dates</label>
+            <input type="text" id="acc-dates" name="mod_dates">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="acc-files">Attachments</label>
+          <input type="file" id="acc-files" multiple accept=".jpg,.jpeg,.png,.gif,.webp,.heic,.pdf,.doc,.docx" aria-describedby="acc-files-hint">
+          <ul class="file-list" aria-live="polite"></ul>
+          <p class="hint" id="acc-files-hint">Up to 6 files: a site plan or sketch, photos of the current condition, material or color samples, or a contractor estimate. JPG, PNG, PDF, or Word. Large photos are shrunk automatically.</p>
+        </div>
+
+        <div class="field field-note">
+          <label class="check"><input type="checkbox" name="ack" required> <span>I understand work must not begin until I receive written ACC approval, and that approval does not waive any Montgomery County permit requirements. <span class="req">*</span></span></label>
+        </div>
+
+        <button class="btn btn-pine" type="submit" style="width:100%;justify-content:center;">Submit Request</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p style="font-size:0.78rem;color:var(--ink-soft);margin:6px 0 0;">Your request goes straight to the ACC, and you get a confirmation email with a reference number.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAIN ACC FORM ends above this point.
+       PDF ALTERNATIVE starts here: same form as a fillable PDF, with a "View" button
+       (opens inline via script.js's PDF viewer) and a "Download" link. -->
+  <section aria-labelledby="acc-pdf-h">
+    <div class="wrap">
+      <div class="callout" style="background:var(--surface);">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/></svg></span>
+        <div class="body">
+          <h3 id="acc-pdf-h">Prefer a Fillable PDF Instead?</h3>
+          <p>Same form, as a two-page fillable PDF. Type into it on your phone, tablet, or computer, then email or print it yourself.</p>
+        </div>
+      </div>
+
+      <div class="doc-list" style="margin-top:20px;">
+        <div class="doc-row">
+          <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span>
+          <span class="meta">
+            <strong>Exterior Modification Request Form (fillable PDF)</strong>
+            <span>Type directly into the form on your phone, tablet, or computer. No printing required</span>
+          </span>
+          <span class="dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_Exterior_Modification_Request.pdf" data-pdf-title="Exterior Modification Request Form">View</button>
+            &middot; <a href="pdfs/Westwind_Exterior_Modification_Request.pdf" download target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:700;">Download &rarr;</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link callout: points to rental-registration.html -->
+  <section aria-labelledby="rental-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <div class="body">
+          <h3 id="rental-h">Renting Out Your Home, or Using a Property Manager?</h3>
+          <p>The board keeps a record of which homes are owner-occupied, rented, or professionally managed, along with current contact information for each. If that applies to you, register or update it on the <a href="rental-registration.html" style="color:var(--pine);font-weight:700;">Rental &amp; Property Manager Registration</a> page.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link callout: points to trees.html -->
+  <section aria-labelledby="trees-h">
+    <div class="wrap">
+      <div class="callout" style="background:var(--surface);">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 9 7h6l-3-5Z"/><path d="M12 7 7 14h10L12 7Z"/><path d="M12 14v8M8 22h8"/></svg></span>
+        <div class="body">
+          <h3 id="trees-h">Thinking About Removing a Tree?</h3>
+          <p>The board is not currently requiring approval to remove trees. You don't need this form for it. See the <a href="trees.html" style="color:var(--pine);font-weight:700;">Trees</a> page for the one rule that still applies and what Montgomery County requires.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cross-link callout: points to colors.html -->
+  <section aria-labelledby="colors-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c1.1 0 2-.9 2-2 0-.5-.2-1-.5-1.4-.3-.4-.5-.9-.5-1.4 0-1.1.9-2 2-2h2.4c2.5 0 4.6-2.1 4.6-4.6C22 6 17.5 2 12 2Z"/></svg></span>
+        <div class="body">
+          <h3 id="colors-h">Repainting or Replacing Siding, Trim, or a Door?</h3>
+          <p>Color is a big part of what the board discusses, and it needs ACC approval like any other exterior change. The full approved palette will be posted on the <a href="colors.html" style="color:var(--pine);font-weight:700;">Approved Colors</a> page once it's finalized; until then, submit your color choice through this form and the ACC will confirm it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing section: points to library.html for the full governing-document set -->
+  <section class="section-sage" aria-labelledby="library-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Full library</span>
+        <h2 id="library-h">Looking for the CC&amp;Rs, Bylaws, or Articles?</h2>
+        <p>Every governing document is dated and listed individually in the Document Library, so you can find exactly what you need without downloading a bundle.</p>
+      </div>
+
+      <div class="doc-list" style="margin-bottom:24px;">
+        <div class="doc-row">
+          <span class="file-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></svg></span>
+          <span class="meta"><strong>ACC Guidelines (2012)</strong><span>The full guideline document referenced throughout this page</span></span>
+          <span class="dl">
+            <button class="btn-view-pdf" data-pdf-src="pdfs/Westwind_ACC_Guidelines_2012.pdf" data-pdf-title="ACC Guidelines (2012)">View</button>
+            &middot; <a href="pdfs/Westwind_ACC_Guidelines_2012.pdf" download style="color:var(--gold-dark);font-weight:700;">Download &rarr;</a>
+          </span>
+        </div>
+      </div>
+
+      <a class="btn btn-pine" href="library.html">Go to the Document Library &rarr;</a>
+    </div>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="forms.js"></script>
+</body>
+</html>
