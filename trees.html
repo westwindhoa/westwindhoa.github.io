@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trees | Westwind at Flower Hill</title>
+<meta name="description" content="Westwind's actual rule on removing trees, straight from the Declaration of Covenants, plus Montgomery County's tree permit rules.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .covenant-quote{
+    background: var(--pine-dark); color:#fff; border-radius: var(--radius);
+    padding: 30px 34px; box-shadow: var(--shadow);
+    font-family: var(--serif); font-size: 1.08rem; line-height: 1.55;
+  }
+  .covenant-quote cite{
+    display:block; margin-top:18px; font-family: var(--sans); font-style:normal;
+    font-size: 0.8rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color: var(--gold);
+  }
+  .rule-table{ display:flex; flex-direction:column; gap:12px; }
+  .rule-row{
+    display:grid; grid-template-columns: 1.4fr 2fr; gap:18px; align-items:center;
+    background: var(--surface); border-radius: var(--radius-sm); padding: 16px 20px;
+    box-shadow: var(--shadow-xs);
+  }
+  @media (max-width:640px){ .rule-row{ grid-template-columns:1fr; gap:6px; } }
+  .rule-row .cond{ font-weight:700; color:var(--pine-dark); font-size:0.96rem; }
+  .rule-row .outcome{ display:flex; align-items:center; gap:8px; font-size:0.94rem; }
+  .rule-row .outcome.needed{ color:#93662E; font-weight:700; }
+  .rule-row .outcome.not-needed{ color:#2E7D4F; font-weight:700; }
+</style>
+</head>
+<body>
+<!--
+TREES
+  Declaration Article VII Section 2 still contains the tree approval rule.
+  At its October 2026 meeting the board agreed not to require approval
+  requests for tree removal for now. Nothing official has been amended,
+  so this page never says the rule was removed. Upkeep powers (Article VI,
+  Article VII Section 9) and the sight-line rule are still enforced.
+  Montgomery County tree-permit rules are a separate layer.
+-->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <nav class="nav wrap">
+    <a class="brand" href="index.html">
+      <img class="brand-mark" src="images/logo-icon.png" alt="Westwind HOA logo" width="240" height="149">
+      Westwind
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+    </button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Board <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Guide <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">FAQ <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html" aria-current="page">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Community <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Pool <svg viewBox="0 0 12 8" fill="none"><path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <ul class="submenu">
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </li>
+      <li><a class="nav-cta" href="documents.html#acc">Exterior Modification Form</a></li>
+      <li><a class="nav-contact-btn" href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- Page header/intro -->
+  <section class="page-hero">
+    <div class="wrap">
+      <span class="eyebrow">Documents &rsaquo; Trees</span>
+      <h1>Removing a Tree</h1>
+      <p>Whether you need approval, what upkeep is still expected, the rule on the books, and what Montgomery County separately requires.</p>
+    </div>
+  </section>
+
+  <!-- Short version -->
+  <section aria-labelledby="bottom-line-h">
+    <div class="wrap">
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></span>
+        <div class="body">
+          <h3 id="bottom-line-h">The Short Version</h3>
+          <p>The board is not currently requiring approval to remove a tree on your lot, whatever its size or location. There's no form to submit and no replacement tree required. Keep your yard neat, keep sight lines clear for drivers, and check the county rules below if the tree sits between the sidewalk and the street.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick answer table, placed high for people skimming -->
+  <section class="section-sage" aria-labelledby="plain-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="plain-h">Do You Need Approval to Remove a Tree?</h2>
+        <p>Not at this time. Trunk size and location don't change the answer.</p>
+      </div>
+      <div class="rule-table">
+        <div class="rule-row">
+          <span class="cond">Trunk under 4" diameter (measured 2 ft up)</span>
+          <span class="outcome not-needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> No approval needed</span>
+        </div>
+        <div class="rule-row">
+          <span class="cond">Trunk over 4", inside the driveway/parking area</span>
+          <span class="outcome not-needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> No approval needed</span>
+        </div>
+        <div class="rule-row">
+          <span class="cond">Trunk over 4", anywhere else on the lot, front or back</span>
+          <span class="outcome not-needed"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg> No approval needed</span>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top:26px;">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
+        <div class="body">
+          <h3>No Replacement Requirement</h3>
+          <p>You don't have to plant a new tree in place of one you remove. None of Westwind's governing documents has ever required a replacement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suggestion: reasons to keep trees -->
+  <section aria-labelledby="keep-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Before you cut</span>
+        <h2 id="keep-h">Why Trees Are Worth Keeping</h2>
+        <p>Removing a tree is your call. Before you do, here are a few reasons many homeowners choose to keep their mature trees and trim them instead.</p>
+      </div>
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Home value</span>
+          <h3>Trees Add Value</h3>
+          <p>The Arbor Day Foundation estimates that large trees can raise property values by 3 to 15 percent. Virginia Cooperative Extension puts the figure at 5 to 12 percent. Buyers notice mature trees and tree-lined streets.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Energy savings</span>
+          <h3>Lower Energy Bills</h3>
+          <p>Well-placed trees can cut heating and cooling energy use by up to 25 percent. They shade the house in summer and block cold wind in winter.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Neighborhood</span>
+          <h3>Cleaner Air and Quieter Streets</h3>
+          <p>Mature trees improve air quality, soften traffic noise, soak up stormwater and give Westwind the established look that makes it a desirable place to live.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Our suggestion</span>
+          <h3>Try Trimming First</h3>
+          <p>If a tree is too big, too close to the house or dropping limbs, a good pruning or crown thinning can often fix the problem without losing the tree. An ugly trim doesn't mean a tree is dead, and most trees grow back fuller.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Hiring help</span>
+          <h3>Use a Licensed Tree Expert</h3>
+          <p>Maryland requires tree care professionals to be licensed by the Maryland DNR Forest Service. Ask for the license number and check it before you hire. Be wary of door-to-door crews that only give a cell number, especially after storms.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Learn more</span>
+          <h3>Sources</h3>
+          <p><a href="https://citygreen.com/do-trees-increase-property-value/" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Do Trees Increase Property Value?</a><br><a href="https://www.nashvilletreeconservationcorps.org/treenews/how-much-can-a-large-canopy-tree-reduce-summer-cooling-costs" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">How Large Trees Reduce Cooling Costs</a><br><a href="https://dnr.maryland.gov/forests/Pages/licensed-tree-experts.aspx" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Find a Maryland Licensed Tree Expert</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Upkeep rules that still apply -->
+  <section class="section-sage" aria-labelledby="upkeep-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Still in effect</span>
+        <h2 id="upkeep-h">Yard Upkeep Still Matters</h2>
+        <p>Taking a tree down is your call. Keeping the yard in good shape is still expected, and the board keeps the right to enforce it.</p>
+      </div>
+      <h3 id="maint-h" style="margin:0 0 12px;">Exterior Maintenance</h3>
+      <blockquote class="covenant-quote">
+        &ldquo;In the event an owner of any Lot in the Properties shall fail to maintain the premises and the improvements situated thereon in a manner satisfactory to the Board of Directors, the Association, after approval by two-thirds (2/3) vote of the Board of Directors, shall have the right, through its agents and employees, to enter upon said parcel and to repair, maintain and restore the Lot and the exterior of the buildings and any other improvements erected thereon. The cost of such exterior maintenance shall be added to and become part of the assessment to which said Lot is subject.&rdquo;
+        <cite>Declaration of Covenants, Conditions and Restrictions &middot; Article VI</cite>
+      </blockquote>
+      <p style="margin:14px 0 30px;font-size:0.92rem;color:var(--ink-soft);">In other words: if a lot isn't kept up, the board can vote to have the work done and add the cost to that owner's assessment.</p>
+
+      <h3 id="plantings-h" style="margin:0 0 12px;">Hedges, Plantings and Lot Care</h3>
+      <blockquote class="covenant-quote">
+        &ldquo;The Association shall have the right (if after 20 days written notice to the Owner of the Lot or Lots involved, setting forth the action intended to be taken, such action has not been taken by the Owner) to trim or prune, at the expense of the Owner, any hedge or other planting that in the opinion of the Architectural Control Committee, by reason of its location or the height to which or the manner in which it is permitted to grow, is detrimental to adjoining property, or is unattractive in appearance. The Association shall further have the right, upon like notice and conditions, to care for any vacant or unimproved lot, and to remove grass, weeds and rubbish therefrom and do any and all things necessary or desirable in the opinion of the Architectural Control Committee to keep such Lot in neat and good order, and at the cost and expense of the Owner.&rdquo;
+        <cite>Declaration of Covenants, Conditions and Restrictions &middot; Article VII, Section 9</cite>
+      </blockquote>
+      <p style="margin:14px 0 30px;font-size:0.92rem;color:var(--ink-soft);">In other words: after 20 days' written notice, the Association can trim overgrown or unattractive plantings and clean up a neglected lot at the owner's expense. After a tree removal, please clean up branches and debris so the yard stays neat.</p>
+
+      <div class="callout">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div class="body">
+          <h3 id="sightline-h">Keep Sight Lines Clear</h3>
+          <p>No tree, hedge, shrub, fence, or wall may be kept in a way that blocks sight lines for drivers (Article VII, Section 2). If something on your lot makes it hard to see around a corner or out of a driveway, trim it back or take it down.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Original rule, for reference -->
+  <section aria-labelledby="covenant-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Straight from the Declaration</span>
+        <h2 id="covenant-h">Why the Tree Rule Was Written</h2>
+        <p>The tree rule dates back to 1984, when Westwind was a brand-new neighborhood and every young tree mattered. Today Westwind is an established community with plenty of mature trees. When one comes down there is usually another already growing nearby. For that reason, the board is not currently requiring approval requests under this rule. The rule itself has not been removed from the Declaration.</p>
+      </div>
+      <blockquote class="covenant-quote">
+        &ldquo;No fence, wall, tree, hedge or shrub planting shall be maintained in such manner as to obstruct sight lines for vehicular traffic. Except as may be required to comply with the prior sentence, no tree of a diameter of more than four inches measured two feet above ground level, lying without the approved building driveway and parking areas, shall be removed without the approval of the Architectural Control Committee.&rdquo;
+        <cite>Declaration of Covenants, Conditions and Restrictions &middot; Article VII, Section 2</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Montgomery County tree permit rules (separate from Westwind) -->
+  <section class="section-sage" aria-labelledby="county-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">A separate layer of rules</span>
+        <h2 id="county-h">Montgomery County's Tree Rules</h2>
+        <p>Montgomery County has its own tree rules, separate from Westwind's. Most homeowners removing a tree from their own lot won't need anything from the county. Check the cards below if your tree is near the street or part of a bigger project.</p>
+      </div>
+
+      <div class="board-grid">
+        <div class="board-card">
+          <span class="role">Most homeowners</span>
+          <h3>Trees on Your Own Lot</h3>
+          <p>The county generally does not require a permit to remove a tree on private property. Removing a stump on private property doesn't need a county permit either.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Larger projects only</span>
+          <h3>When County Rules Kick In</h3>
+          <p>The county's Tree Canopy Law only applies if your project already requires a sediment control permit. This generally means new construction, disturbing more than 5,000 sq ft of land, or moving 100+ cubic yards of earth. Removing one or two trees on their own typically doesn't trigger this.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Trees near the street</span>
+          <h3>Roadside &amp; Right-of-Way Trees</h3>
+          <p>A tree growing in the public right-of-way (between the street and your property, not on your lot) needs <strong>two</strong> permits, one from Montgomery County and one from the Maryland DNR Forest Service, before it can be pruned, disturbed, or removed.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Rare exceptions</span>
+          <h3>Historic &amp; Champion Trees</h3>
+          <p>Trees in a designated historic area, or listed on the county's Champion Tree Register, need separate clearance before any work. Uncommon for a typical Westwind lot, but worth knowing.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Safety first</span>
+          <h3>Hazardous Trees</h3>
+          <p>If a Maryland-licensed tree expert or certified arborist determines a tree is hazardous, it can be removed promptly. The usual permit steps don't hold up a genuine safety issue.</p>
+        </div>
+        <div class="board-card">
+          <span class="role">Learn more</span>
+          <h3>County Resources</h3>
+          <p><a href="https://www.montgomerycountymd.gov/dep/property-care/trees/permits-concerns.html" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Tree Permits, Removal &amp; Concerns</a><br><a href="https://www.montgomerycountymd.gov/DEP/property-care/trees/laws-programs.html" target="_blank" rel="noopener" style="color:var(--pine);font-weight:700;">Tree Laws &amp; Programs</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 24L20 12L32 24" stroke="#B8834B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22V30H28V22" stroke="#E7EEF5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Westwind
+        </div>
+        <p style="max-width:36ch;font-size:0.92rem;color:rgba(255,255,255,0.72);">A sub-association of the Flower Hill community &middot; Gaithersburg, Maryland</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Board</h4>
+        <ul>
+          <li><a href="board.html">Board & Contacts</a></li>
+          <li><a href="meetings.html">Board Meetings</a></li>
+          <li><a href="minutes.html">Meeting Minutes</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="rental-registration.html">Rental & Property Manager Registration</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guide &amp; FAQ</h4>
+        <ul>
+          <li><a href="documents.html">Documents & Forms</a></li>
+          <li><a href="library.html">Document Library</a></li>
+          <li><a href="maintenance-checklist.html">Home Maintenance Checklist</a></li>
+          <li><a href="suspected-violations.html">Report a Violation</a></li>
+          <li><a href="fences.html">Fences & Gates</a></li>
+          <li><a href="trees.html">Trees</a></li>
+          <li><a href="parking.html">Street Parking</a></li>
+          <li><a href="colors.html">Approved Colors</a></li>
+          <li><a href="holiday-decorations.html">Holiday Decorations</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Community &amp; Pool</h4>
+        <ul>
+          <li><a href="community.html">Community Home</a></li>
+          <li><a href="good-neighbor.html">Good Neighbor Guide</a></li>
+          <li><a href="events.html">Community Events</a></li>
+          <li><a href="resources.html">County & Utility Resources</a></li>
+          <li><a href="flower-hill-central.html">Flower Hill Central</a></li>
+          <li><a href="pool.html">Pool</a></li>
+          <li><a href="swim-team.html">Swim Team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Westwind Sub-Association, Flower Hill</span>
+      <span>Built for residents, by the board.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
