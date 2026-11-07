@@ -426,6 +426,24 @@ section{ padding: 68px 0; }
 .announce h3{ margin: 0 0 4px; font-size: 1.05rem; }
 .announce p{ margin:0; font-size: 0.94rem; }
 
+/* Next board meeting (home page). Date text is filled in by script.js section 5. */
+.next-meeting{
+  display:grid; grid-template-columns: minmax(240px, 1fr) 1.4fr; gap:0;
+  background: var(--white); border-radius: var(--radius); overflow:hidden;
+  box-shadow: var(--shadow-sm); margin-bottom: 22px;
+}
+@media (max-width: 760px){ .next-meeting{ grid-template-columns: 1fr; } }
+.next-meeting-date{
+  background: var(--pine-dark); color:#fff; padding: 26px 28px;
+  display:flex; flex-direction:column; gap:6px; justify-content:center;
+}
+.next-meeting .nm-eyebrow{ font-size:0.78rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color: var(--gold); }
+.next-meeting .nm-date{ font-family: var(--serif); font-size:1.35rem; font-weight:800; line-height:1.25; }
+.next-meeting .nm-time{ font-size:0.95rem; color: rgba(255,255,255,0.85); }
+.next-meeting .nm-type{ font-size:0.85rem; color: rgba(255,255,255,0.7); }
+.next-meeting-body{ padding: 26px 28px; display:flex; flex-direction:column; justify-content:center; gap:14px; align-items:flex-start; }
+.next-meeting-body p{ margin:0; font-size:0.98rem; }
+
 /* Two-col feature */
 .feature{
   display:grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items:center;

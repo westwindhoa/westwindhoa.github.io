@@ -3,37 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Approved Exterior Colors | Westwind at Flower Hill</title>
-<meta name="description" content="Approved siding, trim, and door colors for Westwind homes, and how the color approval process works for exterior modification requests.">
+<title>Exterior Colors | Westwind HOA at Flower Hill</title>
+<meta name="description" content="How to get a siding, trim or door color approved for a Westwind home through the Architectural Control Committee (ACC).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  .swatch-row{ display:flex; gap:14px; flex-wrap:wrap; margin-top:16px; }
-  .swatch{
-    width:84px; display:flex; flex-direction:column; align-items:center; gap:8px;
+  .color-steps{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:14px; max-width: 760px; }
+  .color-steps li{
+    display:flex; gap:14px; align-items:flex-start;
+    background: var(--white); border-radius: var(--radius-sm); padding: 16px 18px;
+    box-shadow: var(--shadow-xs); font-size:0.98rem;
   }
-  .swatch .chip{
-    width:64px; height:64px; border-radius:14px;
-    background: var(--surface); box-shadow: var(--shadow-raised);
-    border: 1px dashed var(--line);
+  .color-steps .num{
+    width:28px; height:28px; border-radius:50%; background:var(--pine); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-size:0.85rem; font-weight:700; flex:none;
   }
-  .swatch .label{ font-size:0.74rem; font-weight:600; color:var(--ink-soft); text-align:center; }
 </style>
 </head>
 <body>
 <!--
 APPROVED EXTERIOR COLORS
-  Placeholder page: the board is still finalizing the actual approved
-  siding/trim/door color list (happening in conversations outside this
-  file). Structure is ready to receive that list the moment it's final
-  -- see the "swatch-row" blocks below in each category section, and
-  replace the empty .swatch placeholders with real color chips (name,
-  brand, code). Do NOT invent specific paint colors/brands here even
-  temporarily; leave the placeholder state until real approved colors
-  exist. Cross-linked from documents.html and fences.html so people
-  land here from the ACC form and the fence guidelines page too.
+  Explains how a color change is approved today (through the ACC form).
+  If the board adopts a neighborhood color list, add it as a new section
+  between "How Color Approval Works" and the closing form link.
 -->
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -106,78 +100,47 @@ APPROVED EXTERIOR COLORS
   <section class="page-hero">
     <div class="wrap">
       <span class="eyebrow">ACC Standard</span>
-      <h1>Approved Exterior Colors</h1>
-      <p>Siding, trim, and door color is one of the most common topics the board discusses. This page will hold the approved palette once it's finalized, in one place, so residents can check before they buy paint or order siding.</p>
+      <h1>Getting a Color Approved</h1>
+      <p>Siding, trim and door color is one of the most common topics the board discusses. Here's how a color change gets approved today.</p>
     </div>
   </section>
 
-  <!-- "Being finalized" notice -- remove once real colors are added below -->
-  <section aria-labelledby="status-h">
+  <!-- How color approval works today -->
+  <section class="section-sage" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Before you buy paint or siding</span>
+        <h2 id="how-h">How Color Approval Works</h2>
+        <p>Every exterior color change goes through the Architectural Control Committee (ACC), the same as any other exterior modification. Siding, trim and front doors are all included.</p>
+      </div>
+      <ol class="color-steps">
+        <li><span class="num">1</span><span>Choose your color. Write down the brand, the color name and the color code from the paint chip or siding sample.</span></li>
+        <li><span class="num">2</span><span>Submit an <a href="documents.html#acc" style="color:var(--pine);font-weight:700;">Exterior Modification Form</a>. Say which part of the house the color is for, and attach a photo of the chip or sample.</span></li>
+        <li><span class="num">3</span><span>Wait for ACC approval before you buy materials or start work.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Exception note -->
+  <section aria-labelledby="exception-h">
     <div class="wrap">
       <div class="callout">
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></span>
         <div class="body">
-          <h3 id="status-h">This Page Is Being Finalized</h3>
-          <p>The board is working through the approved color list. Once it's settled, the specific colors, brands, and swatches will be posted here. Until then, any exterior color change still needs to go through the standard <a href="documents.html#acc" style="color:var(--pine);font-weight:700;">Exterior Modification Form</a>, and the ACC will confirm whether a proposed color is approved as part of that review.</p>
+          <h3 id="exception-h">Not Sure If You Need a Request?</h3>
+          <p>Exact repairs and replacements are the only exception to the request rule. If you're not sure whether your project counts, ask the board through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a> before work begins.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SIDING swatches -- replace placeholder .swatch divs with real color chips once finalized -->
-  <section class="section-sage" aria-labelledby="siding-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Category</span>
-        <h2 id="siding-h">Siding</h2>
-        <p>Approved siding colors will be listed here as swatches, with the color name and code, once finalized.</p>
-      </div>
-      <div class="swatch-row">
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRIM swatches -->
-  <section aria-labelledby="trim-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Category</span>
-        <h2 id="trim-h">Trim</h2>
-        <p>Approved trim colors will be listed here once finalized.</p>
-      </div>
-      <div class="swatch-row">
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DOOR swatches -->
-  <section class="section-sage" aria-labelledby="doors-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Category</span>
-        <h2 id="doors-h">Doors</h2>
-        <p>Approved door colors will be listed here once finalized. Front doors are sometimes handled with more flexibility than siding and trim; that distinction, if the board keeps it, will be explained here too.</p>
-      </div>
-      <div class="swatch-row">
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-        <div class="swatch"><div class="chip"></div><span class="label">Color name</span></div>
-      </div>
-    </div>
-  </section>
-
   <!-- Closing CTA to the ACC form -->
-  <section aria-labelledby="request-h">
+  <section class="section-sage" aria-labelledby="request-h">
     <div class="wrap">
       <div class="section-head">
-        <span class="eyebrow">Changing your color now?</span>
+        <span class="eyebrow">Changing your color?</span>
         <h2 id="request-h">Submit It Through the ACC</h2>
-        <p>Any exterior color change, siding, trim, or door, still needs ACC approval before work begins, the same as any other exterior modification.</p>
+        <p>Approval comes before work begins, the same as any other exterior modification.</p>
       </div>
       <a class="btn btn-gold" href="documents.html#acc">Go to the Exterior Modification Form &rarr;</a>
     </div>

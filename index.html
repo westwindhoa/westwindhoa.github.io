@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Westwind at Flower Hill</title>
-<meta name="description" content="Westwind is a sub-association of the Flower Hill community in Gaithersburg, Maryland. Find board contacts, governing documents, and the exterior modification request form.">
+<title>Westwind HOA at Flower Hill | Gaithersburg, MD</title>
+<meta name="description" content="Official website of the Westwind Homeowners Association (Westwind HOA), a sub-association of Flower Hill in Gaithersburg, Maryland. Board meetings, governing documents, forms and the exterior modification request.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,9 +14,8 @@
 <!--
 HOMEPAGE
   Sections top to bottom: .hero (headline + stat panel) -> quick-link
-  .cards grid -> .announce-list (hand-edit these <div class="announce">
-  blocks directly in this file to add/remove announcements — newest
-  should go first) -> two .photo-banner illustration strips -> About
+  .cards grid -> next board meeting (date filled in by script.js section 5)
+  -> .announce-list (newest announcement first) -> volunteer callout -> two .photo-banner illustration strips -> About
   Westwind two-col .feature section. See style.css's table of contents
   for what each class does.
 -->
@@ -176,7 +175,28 @@ HOMEPAGE
         <span class="eyebrow">Community news</span>
         <h2 id="announce-h">Announcements</h2>
       </div>
+      <!-- Next board meeting. The date is filled in by script.js (section 5). -->
+      <div class="next-meeting" data-next-meeting>
+        <div class="next-meeting-date">
+          <span class="nm-eyebrow">Next board meeting</span>
+          <span class="nm-date" data-meeting-date>Third Wednesday of every month</span>
+          <span class="nm-time">7:30 p.m. &middot; Google Meet video call or phone</span>
+          <span class="nm-type" data-meeting-type>Monthly board meeting</span>
+        </div>
+        <div class="next-meeting-body">
+          <p><strong>Every Westwind homeowner is welcome.</strong> Board meetings are open to all homeowners. Join from a computer, tablet or smartphone, or call in by phone. Smartphones need the free Google Meet app first.</p>
+          <a class="btn btn-gold" href="meetings.html#join-h">How to Join &rarr;</a>
+        </div>
+      </div>
+
       <div class="announce-list">
+        <article class="announce">
+          <span class="date">Holiday season</span>
+          <div>
+            <h3>Decorating for the Holidays? One Rule to Remember</h3>
+            <p>Decorate for any holiday you like. Everything needs to come down within 30 days of the holiday it celebrates. Decorations for December 25 come down by January 24. Keep lights pointed at your own lot. See the <a href="holiday-decorations.html" style="color:var(--pine);font-weight:700;">Holiday Decorations</a> page for the details.</p>
+          </div>
+        </article>
         <article class="announce">
           <span class="date">Reminder</span>
           <div>
@@ -184,13 +204,15 @@ HOMEPAGE
             <p>Split-rail fences with an A-frame gate are the only approved style. See the full <a href="fences.html" style="color:var(--pine);font-weight:700;">Fence &amp; Gate Guidelines</a> before you buy materials or hire a contractor.</p>
           </div>
         </article>
-        <article class="announce">
-          <span class="date">Month 00</span>
-          <div>
-            <h3>Sample Announcement Headline</h3>
-            <p>Each announcement card supports a short headline and a couple of sentences. Link out to a document or the contact page if more detail is needed.</p>
-          </div>
-        </article>
+      </div>
+
+      <!-- Volunteer invitation -->
+      <div class="callout" style="margin-top:22px;">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+        <div class="body">
+          <h3 id="volunteer-h">Lend a Hand</h3>
+          <p>Westwind runs on volunteers. If you'd like to help the Architectural Control Committee (ACC) review exterior modification requests, or help plan Pizza Night, the yard sale or the bulk trash pickup, tell us through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a>. A few hours a year makes a real difference.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -215,7 +237,7 @@ HOMEPAGE
       <div class="section-head">
         <span class="eyebrow">New Here?</span>
         <h2 id="tour-h">A Two-Minute Tour of This Site</h2>
-        <p>Where to find things, how to submit a request, and how to reach the board &mdash; walked through in a few slides.</p>
+        <p>Where to find things, how to submit a request, and how to reach the board, all walked through in a few slides.</p>
       </div>
       <div class="resident-tour-frame">
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSg5ejf_ZoJzUI16e0HZeJhQXh47-kD03OIsbSScCFwnMo5fUvQ2iq-nc2mOUo3lOGJeRH_fJrhof8k/pubembed?start=false&amp;loop=false&amp;delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" title="A tour of the Westwind website"></iframe>

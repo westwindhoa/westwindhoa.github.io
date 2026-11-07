@@ -15,6 +15,9 @@
                                    a download. See the "PDF INLINE VIEWER"
                                    section below for how to use it on a new
                                    page.
+     5. Next board meeting     — fills in the date of the next meeting
+                                   on the home page (third Wednesday of
+                                   each month, 7:30 p.m.)
 
    Everything below runs once the HTML has finished loading
    (DOMContentLoaded), so it's safe to look up elements by class/id right
@@ -261,6 +264,64 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && modal.classList.contains('open')) closePdfModal();
     });
+  }
+
+
+  /* -----------------------------------------------------------------------
+     5. NEXT BOARD MEETING (home page)
+     -------------------------------------------------------------------
+     Finds the next third Wednesday of the month and writes it into any
+     element with the attribute data-next-meeting. A meeting stays listed
+     until 9:30 p.m. on its night, then the date rolls to next month.
+     March is labeled as the Annual Meeting.
+
+     IF A MEETING MOVES OR IS CANCELED
+     Add it to MEETING_CHANGES below, using the regular date as the key.
+       Moved:    '2026-12-16': '2026-12-09'
+       Canceled: '2026-12-16': 'canceled'
+     A canceled meeting is skipped and the next regular date is shown.
+     ----------------------------------------------------------------------- */
+  var MEETING_CHANGES = {
+  };
+
+  var meetingTargets = document.querySelectorAll('[data-next-meeting]');
+  if (meetingTargets.length) {
+    var pad = function (n) { return (n < 10 ? '0' : '') + n; };
+    var key = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
+    var thirdWednesday = function (year, month) {
+      var first = new Date(year, month, 1);
+      var offset = (3 - first.getDay() + 7) % 7;
+      return new Date(year, month, 1 + offset + 14, 19, 30);
+    };
+    var now = new Date();
+    var found = null;
+    for (var i = 0; i < 14 && !found; i++) {
+      var y = now.getFullYear() + Math.floor((now.getMonth() + i) / 12);
+      var m = (now.getMonth() + i) % 12;
+      var regular = thirdWednesday(y, m);
+      var change = MEETING_CHANGES[key(regular)];
+      var actual = regular;
+      if (change === 'canceled') continue;
+      if (change) {
+        var parts = change.split('-');
+        actual = new Date(+parts[0], +parts[1] - 1, +parts[2], 19, 30);
+      }
+      var endsAt = new Date(actual.getTime() + 2 * 60 * 60 * 1000);
+      if (endsAt > now) found = { date: actual, annual: m === 2, moved: !!change };
+    }
+    if (found) {
+      var label = found.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+      meetingTargets.forEach(function (el) {
+        var dateEl = el.querySelector('[data-meeting-date]');
+        var typeEl = el.querySelector('[data-meeting-type]');
+        if (dateEl) dateEl.textContent = label;
+        if (typeEl) {
+          typeEl.textContent = found.annual
+            ? 'Annual Meeting, held right before the regular board meeting'
+            : (found.moved ? 'Board meeting (moved from the usual date)' : 'Monthly board meeting');
+        }
+      });
+    }
   }
 
 });

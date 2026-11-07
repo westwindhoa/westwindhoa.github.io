@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Board Meetings | Westwind at Flower Hill</title>
+<title>Board Meetings | Westwind HOA at Flower Hill</title>
 <meta name="description" content="Westwind Board of Directors meetings are held monthly by Google Meet video conference, with an annual meeting each March. Join details, call-in number, and meeting schedule.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,6 +84,17 @@
     display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:700; flex:none;
   }
   .device-steps .step-text{ flex:1; text-align:left; }
+  .covenant-quote{
+    background: var(--pine-dark); color:#fff; border-radius: var(--radius);
+    padding: 30px 34px; box-shadow: var(--shadow); margin: 0 0 14px;
+    font-family: var(--serif); font-size: 1.05rem; line-height: 1.6;
+  }
+  .covenant-quote cite{
+    display:block; margin-top:18px; font-family: var(--sans); font-style:normal;
+    font-size: 0.8rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+    color: var(--gold);
+  }
+  .plain-terms{ font-size:0.95rem; color:var(--ink); margin: 0 0 30px; max-width: 78ch; }
 </style>
 </head>
 <body>
@@ -271,6 +282,30 @@ BOARD MEETINGS
     </div>
   </section>
 
+  <!-- Voting by proxy + quorum, quoted verbatim from the Bylaws (Article III,
+       Sections 4 and 5; Section 4 as amended April 19, 2000, recorded Sept. 15, 2000) -->
+  <section class="section-sage" aria-labelledby="proxy-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Can't make the annual meeting?</span>
+        <h2 id="proxy-h">Voting by Proxy</h2>
+        <p>A proxy lets someone else vote for you at a meeting of homeowners, and it counts toward the quorum. Here's exactly what the Bylaws say.</p>
+      </div>
+
+      <blockquote class="covenant-quote">
+        &ldquo;At all meetings of members, each member may vote in person or by proxy. All proxies shall be in writing and filed with the Secretary. Every proxy shall be revocable and shall automatically cease upon conveyance by the member of his lot.&rdquo;
+        <cite>Bylaws &middot; Article III, Section 5 (Proxies)</cite>
+      </blockquote>
+      <p class="plain-terms"><strong>In plain terms:</strong> a proxy has to be in writing and given to the board's Secretary. You can cancel it at any time. It ends automatically when you sell your home. File one by emailing your signed proxy to <a href="mailto:westwindhomeownersassoc@gmail.com" style="color:var(--pine);font-weight:700;">westwindhomeownersassoc@gmail.com</a>, addressed to the Secretary, before the meeting.</p>
+
+      <blockquote class="covenant-quote">
+        &ldquo;The presence at the meeting of members entitled to cast, or of proxies entitled to cast, twenty-five percent (25%) of the votes of the membership shall constitute a quorum for any action except as otherwise provided in the Articles of Incorporation, the Declaration of Covenants, Conditions and Restrictions, or these Bylaws. If, however, such quorum shall not be present or represented at any meeting, another meeting may be called so long as the procedures and notice and advertisement requirements set forth in the Maryland Annotated Code, Corporations and Associations Article, &sect; 5-206, as amended, are followed. So long as these requirements are met, at the additional meeting, the members present in person or by proxy shall constitute a quorum. A majority of the members present in person or by proxy may approve or authorize the proposed action at the additional meeting and may take any other action which could have been taken at the original meeting if a sufficient number of members had been present.&rdquo;
+        <cite>Bylaws &middot; Article III, Section 4 (Quorum), as amended April 19, 2000</cite>
+      </blockquote>
+      <p class="plain-terms" style="margin-bottom:0;"><strong>In plain terms:</strong> the annual meeting needs 25% of the votes, in person or by proxy, to do business. If it falls short, the board can call another meeting under Maryland law. At that meeting, whoever attends in person or by proxy is enough. Every proxy you send in helps the March meeting reach a quorum the first time.</p>
+    </div>
+  </section>
+
   <!-- Cross-link callout: points to minutes.html -->
   <section aria-labelledby="minutes-link-h">
     <div class="wrap">
@@ -278,7 +313,7 @@ BOARD MEETINGS
         <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 8h16M8 4v16"/></svg></span>
         <div class="body">
           <h3 id="minutes-link-h">Couldn't Make a Meeting?</h3>
-          <p>Approved minutes from every Board meeting are posted on the <a href="minutes.html" style="color:var(--pine);font-weight:700;">Meeting Minutes</a> page, so you can see what was discussed and decided.</p>
+          <p>Approved minutes are available to any Westwind homeowner on request. See the <a href="minutes.html" style="color:var(--pine);font-weight:700;">Meeting Minutes</a> page for how to get a copy.</p>
         </div>
       </div>
     </div>
