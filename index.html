@@ -13,9 +13,10 @@
 <body>
 <!--
 HOMEPAGE
-  Sections top to bottom: .hero (headline + stat panel) -> quick-link
-  .cards grid -> next board meeting (date filled in by script.js section 5)
-  -> .announce-list (newest announcement first) -> volunteer callout -> two .photo-banner illustration strips -> About
+  Sections top to bottom: .hero (headline + stat panel) -> Announcements
+  (next board meeting box filled in by script.js section 5, then the
+  .announce-list with newest first, then the volunteer callout) -> quick-link
+  .cards grid -> two .photo-banner illustration strips -> About
   Westwind two-col .feature section. See style.css's table of contents
   for what each class does.
 -->
@@ -119,6 +120,55 @@ HOMEPAGE
     </div>
   </section>
 
+  <!-- Announcements list. Edit the <div class="announce"> blocks directly to add/remove -->
+  <section class="section-sage" aria-labelledby="announce-h">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Community news</span>
+        <h2 id="announce-h">Announcements</h2>
+      </div>
+      <!-- Next board meeting. The date is filled in by script.js (section 5). -->
+      <div class="next-meeting" data-next-meeting>
+        <div class="next-meeting-date">
+          <span class="nm-eyebrow">Next board meeting</span>
+          <span class="nm-date" data-meeting-date>Third Wednesday of every month</span>
+          <span class="nm-time">7:30 p.m. &middot; Google Meet video call or phone</span>
+          <span class="nm-type" data-meeting-type>Monthly board meeting</span>
+        </div>
+        <div class="next-meeting-body">
+          <p><strong>Every Westwind homeowner is welcome.</strong> Board meetings are open to all homeowners. Join from a computer, tablet or smartphone, or call in by phone. Smartphones need the free Google Meet app first.</p>
+          <a class="btn btn-gold" href="meetings.html#join-h">How to Join &rarr;</a>
+        </div>
+      </div>
+
+      <div class="announce-list">
+        <article class="announce">
+          <span class="date">Holiday season</span>
+          <div>
+            <h3>Decorating for the Holidays? One Rule to Remember</h3>
+            <p>Decorate for any holiday you like. Everything needs to come down within 30 days of the holiday it celebrates. Decorations for December 25 come down by January 24. Keep lights pointed at your own lot. See the <a href="holiday-decorations.html" style="color:var(--pine);font-weight:700;">Holiday Decorations</a> page for the details.</p>
+          </div>
+        </article>
+        <article class="announce">
+          <span class="date">Reminder</span>
+          <div>
+            <h3>Planning a Fence or Gate? Read This First</h3>
+            <p>Split-rail fences with an A-frame gate are the only approved style. See the full <a href="fences.html" style="color:var(--pine);font-weight:700;">Fence &amp; Gate Guidelines</a> before you buy materials or hire a contractor.</p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Volunteer invitation -->
+      <div class="callout" style="margin-top:22px;">
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
+        <div class="body">
+          <h3 id="volunteer-h">Lend a Hand</h3>
+          <p>Westwind runs on volunteers. If you'd like to help the Architectural Control Committee (ACC) review exterior modification requests, or help plan Pizza Night, the yard sale or the bulk trash pickup, tell us through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a>. A few hours a year makes a real difference.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Quick-link cards grid, one per major site section -->
   <section aria-labelledby="quicklinks-h">
 
@@ -168,54 +218,6 @@ HOMEPAGE
     </div>
   </section>
 
-  <!-- Announcements list. Edit the <div class="announce"> blocks directly to add/remove -->
-  <section class="section-sage" aria-labelledby="announce-h">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Community news</span>
-        <h2 id="announce-h">Announcements</h2>
-      </div>
-      <!-- Next board meeting. The date is filled in by script.js (section 5). -->
-      <div class="next-meeting" data-next-meeting>
-        <div class="next-meeting-date">
-          <span class="nm-eyebrow">Next board meeting</span>
-          <span class="nm-date" data-meeting-date>Third Wednesday of every month</span>
-          <span class="nm-time">7:30 p.m. &middot; Google Meet video call or phone</span>
-          <span class="nm-type" data-meeting-type>Monthly board meeting</span>
-        </div>
-        <div class="next-meeting-body">
-          <p><strong>Every Westwind homeowner is welcome.</strong> Board meetings are open to all homeowners. Join from a computer, tablet or smartphone, or call in by phone. Smartphones need the free Google Meet app first.</p>
-          <a class="btn btn-gold" href="meetings.html#join-h">How to Join &rarr;</a>
-        </div>
-      </div>
-
-      <div class="announce-list">
-        <article class="announce">
-          <span class="date">Holiday season</span>
-          <div>
-            <h3>Decorating for the Holidays? One Rule to Remember</h3>
-            <p>Decorate for any holiday you like. Everything needs to come down within 30 days of the holiday it celebrates. Decorations for December 25 come down by January 24. Keep lights pointed at your own lot. See the <a href="holiday-decorations.html" style="color:var(--pine);font-weight:700;">Holiday Decorations</a> page for the details.</p>
-          </div>
-        </article>
-        <article class="announce">
-          <span class="date">Reminder</span>
-          <div>
-            <h3>Planning a Fence or Gate? Read This First</h3>
-            <p>Split-rail fences with an A-frame gate are the only approved style. See the full <a href="fences.html" style="color:var(--pine);font-weight:700;">Fence &amp; Gate Guidelines</a> before you buy materials or hire a contractor.</p>
-          </div>
-        </article>
-      </div>
-
-      <!-- Volunteer invitation -->
-      <div class="callout" style="margin-top:22px;">
-        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8Z"/></svg></span>
-        <div class="body">
-          <h3 id="volunteer-h">Lend a Hand</h3>
-          <p>Westwind runs on volunteers. If you'd like to help the Architectural Control Committee (ACC) review exterior modification requests, or help plan Pizza Night, the yard sale or the bulk trash pickup, tell us through the <a href="contact.html" style="color:var(--pine);font-weight:700;">contact page</a>. A few hours a year makes a real difference.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- AI illustration banner #1 (images/illustration-westwind-2.jpg): "Colonial character" tagline -->
   <section class="photo-banner" style="background-image:url('images/illustration-westwind-2.jpg');" aria-labelledby="banner-h">
