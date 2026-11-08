@@ -8,7 +8,7 @@
   'use strict';
 
   // Paste the Apps Script "Web app" URL (ends in /exec) between the quotes.
-  var FORMS_ENDPOINT = 'PASTE_WEB_APP_URL_HERE';
+  var FORMS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz6GO-9OwPsRYqKjjTA7aoWnFJUepRlJTXdr1817nzSDZ4BDQ8iDAWSE7eX6wY9H5yG/exec';
 
   // Used only if the endpoint is not set yet, or if sending fails.
   var FALLBACK_EMAIL = 'westwindhomeownersassoc@gmail.com';
